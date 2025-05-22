@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Users, Car, Euro, Phone, Send } from 'lucide-react';
@@ -6,14 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-
 interface HeroFormData {
   name: string;
   email: string;
   phone: string;
   service: string;
 }
-
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const form = useForm<HeroFormData>({
@@ -24,16 +21,13 @@ const HeroSection = () => {
       service: ''
     }
   });
-
   const handleSubmit = (data: HeroFormData) => {
     console.log('Form submitted:', data);
     // Here you would typically send the data to a server
   };
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
@@ -55,7 +49,7 @@ const HeroSection = () => {
         delay: 0.2
       }} className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-            <span className="text-aa-turquoise">AA</span> Automobile <span className="block text-3xl md:text-4xl mt-2 gradient-text">- Schnell & Zuverlässig</span>
+            <span className="text-aa-turquoise"> Schnell &amp; Zuverlässig</span> Automobile <span className="block text-3xl md:text-4xl mt-2 gradient-text">- Schnell & Zuverlässig</span>
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
@@ -92,93 +86,58 @@ const HeroSection = () => {
         </motion.div>
         
         {/* Thin Contact Form */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="max-w-3xl mx-auto glass-card rounded-lg p-3 my-2 glass-card-hover"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : 20
+      }} transition={{
+        duration: 0.7,
+        delay: 0.6
+      }} className="max-w-3xl mx-auto glass-card rounded-lg p-3 my-2 glass-card-hover">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(handleSubmit)} className="grid grid-cols-2 gap-2">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem className="space-y-1">
+              <FormField control={form.control} name="name" render={({
+              field
+            }) => <FormItem className="space-y-1">
                     <FormControl>
-                      <Input 
-                        placeholder="Ihr Name" 
-                        {...field} 
-                        className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400"
-                      />
+                      <Input placeholder="Ihr Name" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400" />
                     </FormControl>
-                  </FormItem>
-                )}
-              />
+                  </FormItem>} />
               
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem className="space-y-1">
+              <FormField control={form.control} name="email" render={({
+              field
+            }) => <FormItem className="space-y-1">
                     <FormControl>
-                      <Input 
-                        placeholder="Ihre E-Mail" 
-                        type="email" 
-                        {...field} 
-                        className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400"
-                      />
+                      <Input placeholder="Ihre E-Mail" type="email" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400" />
                     </FormControl>
-                  </FormItem>
-                )}
-              />
+                  </FormItem>} />
               
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem className="space-y-1">
+              <FormField control={form.control} name="phone" render={({
+              field
+            }) => <FormItem className="space-y-1">
                     <FormControl>
-                      <Input 
-                        placeholder="Telefonnummer" 
-                        type="tel" 
-                        {...field} 
-                        className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400"
-                      />
+                      <Input placeholder="Telefonnummer" type="tel" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400" />
                     </FormControl>
-                  </FormItem>
-                )}
-              />
+                  </FormItem>} />
               
-              <FormField
-                control={form.control}
-                name="service"
-                render={({ field }) => (
-                  <FormItem className="space-y-1">
+              <FormField control={form.control} name="service" render={({
+              field
+            }) => <FormItem className="space-y-1">
                     <FormControl>
                       <div className="relative flex items-center">
-                        <Input 
-                          placeholder="Ihre Nachricht" 
-                          {...field} 
-                          className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" 
-                        />
-                        <Button 
-                          type="submit" 
-                          size="sm" 
-                          className="absolute right-0 top-0 bottom-0 h-8 bg-aa-turquoise hover:bg-aa-turquoise/80"
-                        >
+                        <Input placeholder="Ihre Nachricht" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" />
+                        <Button type="submit" size="sm" className="absolute right-0 top-0 bottom-0 h-8 bg-aa-turquoise hover:bg-aa-turquoise/80">
                           <Send className="w-3 h-3" />
                         </Button>
                       </div>
                     </FormControl>
-                  </FormItem>
-                )}
-              />
+                  </FormItem>} />
             </form>
           </Form>
         </motion.div>
       </div>
     </section>;
 };
-
 export default HeroSection;
