@@ -49,7 +49,7 @@ const HeroSection = () => {
         delay: 0.2
       }} className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-            <span className="text-aa-turquoise"> Schnell &amp; Zuverlässig</span> Automobile <span className="block text-3xl md:text-4xl mt-2 gradient-text">- Schnell & Zuverlässig</span>
+            <span className="text-aa-turquoise">-Schnell &amp; Zuverlässig</span> Automobile <span className="block text-3xl md:text-4xl mt-2 gradient-text">- Schnell & Zuverlässig</span>
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
