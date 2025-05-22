@@ -53,7 +53,7 @@ const HeroSection = () => {
           </h1>
           
           {/* Separated subtitle with gradient text styling */}
-          <p className="text-3xl md:text-4xl mt-1 mb-4 gradient-text font-bold">Schnell &amp; Zuverlässig</p>
+          <p className="text-3xl md:text-4xl mt-1 mb-4 gradient-text font-bold"> Schnell &amp; Zuverlässig</p>
           
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Ihr vertrauenswürdiger Partner für den Gebrauchtwagenverkauf. Auto kaufen oder verkaufen – wir bieten faire Angebote, geprüfte Fahrzeuge & persönliche Beratung.
