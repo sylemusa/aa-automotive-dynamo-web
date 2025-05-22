@@ -38,9 +38,7 @@ const HeroSection = () => {
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-aa-dark-gray">
-          <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"4\"%3E%3Cpath d=\"M1 3h1v1H1V3zm2-2h1v1H3V1z\" fill=\"white\" fill-opacity=\".3\"%3E%3C/path%3E%3C/svg%3E')"}}></div>
-        </div>
+        {/* Removed the black overlay div that was here */}
       </div>
       
       {/* Hero Main Content */}
