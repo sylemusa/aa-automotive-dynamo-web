@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Users, Car, Euro, Phone, Send } from 'lucide-react';
@@ -37,13 +36,13 @@ const HeroSection = () => {
   return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover" />
-        {/* Light black gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-black/20"></div>
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover brightness-[0.8]" />
+        {/* Darker gradient overlay from bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
       </div>
       
-      {/* Hero Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-16 text-center relative z-10">
+      {/* Hero Main Content - Increased padding top and bottom */}
+      <div className="container mx-auto px-4 pt-40 pb-24 text-center relative z-10">
         <motion.div initial={{
         opacity: 0,
         y: 20
