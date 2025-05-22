@@ -1,16 +1,19 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { Users, Car, Euro, Phone } from 'lucide-react';
+import { Users, Car, Euro, Phone, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
+
 interface HeroFormData {
   name: string;
   email: string;
   phone: string;
   service: string;
 }
+
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const form = useForm<HeroFormData>({
@@ -21,22 +24,25 @@ const HeroSection = () => {
       service: ''
     }
   });
+
   const handleSubmit = (data: HeroFormData) => {
     console.log('Form submitted:', data);
     // Here you would typically send the data to a server
   };
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1614200179396-2bdb77383adf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="AA Automobile Porsche" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-aa-turquoise/30"></div>
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-aa-turquoise/20"></div>
       </div>
       
       {/* Hero Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-24 text-center relative z-10">
+      <div className="container mx-auto px-4 pt-32 pb-16 text-center relative z-10">
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -66,7 +72,7 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.4
-      }} className="flex items-center justify-center gap-6 mb-12">
+      }} className="flex items-center justify-center gap-6 mb-8">
           <div className="flex -space-x-4">
             <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-100 flex items-center justify-center shadow-lg">
               <Users className="text-aa-turquoise" />
@@ -83,10 +89,95 @@ const HeroSection = () => {
             <p className="text-white/80">Im Automobilhandel</p>
           </div>
         </motion.div>
+        
+        {/* Thin Contact Form */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="max-w-3xl mx-auto bg-black/60 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50 shadow-lg"
+        >
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="grid grid-cols-2 gap-3">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="space-y-1">
+                    <FormControl>
+                      <Input 
+                        placeholder="Ihr Name" 
+                        {...field} 
+                        className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="space-y-1">
+                    <FormControl>
+                      <Input 
+                        placeholder="Ihre E-Mail" 
+                        type="email" 
+                        {...field} 
+                        className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem className="space-y-1">
+                    <FormControl>
+                      <Input 
+                        placeholder="Telefonnummer" 
+                        type="tel" 
+                        {...field} 
+                        className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="service"
+                render={({ field }) => (
+                  <FormItem className="space-y-1">
+                    <FormControl>
+                      <div className="relative flex items-center">
+                        <Input 
+                          placeholder="Wunschfahrzeug" 
+                          {...field} 
+                          className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" 
+                        />
+                        <Button 
+                          type="submit" 
+                          size="sm" 
+                          className="absolute right-0 top-0 bottom-0 h-9 bg-aa-turquoise hover:bg-aa-turquoise/80"
+                        >
+                          <Send className="w-4 h-4" />
+                        </Button>
+                      </div>
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+            </form>
+          </Form>
+        </motion.div>
       </div>
-
-      {/* Smaller Contact Form - Moved higher */}
-      
     </section>;
 };
+
 export default HeroSection;
