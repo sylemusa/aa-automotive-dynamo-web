@@ -6,6 +6,77 @@ const Footer = () => {
   return (
     <footer className="bg-black border-t border-aa-dark-gray">
       <div className="container mx-auto py-12 px-4">
+        {/* Contact Us Section - Styled like the reference image */}
+        <div className="mb-12 max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-3 bg-gradient-to-r from-white via-white to-aa-turquoise bg-clip-text text-transparent">
+            Get in touch
+          </h2>
+          <p className="text-gray-400 text-xl mb-8">Vereinbaren Sie eine Probefahrt oder kaufen Sie Ihr Traumauto</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Office Location */}
+            <div className="bg-aa-dark-gray p-6 rounded-xl flex items-start justify-between group hover:bg-black hover:border hover:border-aa-turquoise transition-all duration-300">
+              <div>
+                <h3 className="text-white text-xl font-semibold mb-2">Hauptsitz</h3>
+                <address className="text-gray-300 not-italic">
+                  <p>Musterstraße 1</p>
+                  <p>12345 Musterstadt</p>
+                  <p>Deutschland</p>
+                </address>
+              </div>
+              <div className="text-aa-turquoise">
+                <MapPin size={24} />
+              </div>
+            </div>
+            
+            {/* Phone */}
+            <div className="bg-aa-dark-gray p-6 rounded-xl flex items-start justify-between group hover:bg-black hover:border hover:border-aa-turquoise transition-all duration-300">
+              <div>
+                <h3 className="text-white text-xl font-semibold mb-2">Rufen Sie uns an</h3>
+                <a href="tel:+49123456789" className="text-gray-300 hover:text-aa-turquoise transition-colors duration-300">
+                  +49 123 456789
+                </a>
+              </div>
+              <div className="text-aa-turquoise">
+                <Phone size={24} />
+              </div>
+            </div>
+            
+            {/* Email */}
+            <div className="bg-aa-dark-gray p-6 rounded-xl flex items-start justify-between group hover:bg-black hover:border hover:border-aa-turquoise transition-all duration-300">
+              <div>
+                <h3 className="text-white text-xl font-semibold mb-2">Email kontakt</h3>
+                <a href="mailto:info@aa-automobile.de" className="text-gray-300 hover:text-aa-turquoise transition-colors duration-300">
+                  info@aa-automobile.de
+                </a>
+              </div>
+              <div className="text-aa-turquoise">
+                <Mail size={24} />
+              </div>
+            </div>
+            
+            {/* Opening Hours */}
+            <div className="bg-aa-dark-gray p-6 rounded-xl">
+              <h3 className="text-white text-xl font-semibold mb-2">Öffnungszeiten</h3>
+              <ul className="space-y-1">
+                <li className="flex justify-between text-gray-300">
+                  <span>Mo - Fr:</span>
+                  <span>09:00 - 18:00</span>
+                </li>
+                <li className="flex justify-between text-gray-300">
+                  <span>Sa:</span>
+                  <span>10:00 - 14:00</span>
+                </li>
+                <li className="flex justify-between text-gray-300">
+                  <span>So:</span>
+                  <span>Geschlossen</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and about */}
           <div className="space-y-4">
@@ -93,50 +164,39 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Services */}
           <div>
-            <h3 className="text-white text-xl font-display font-semibold mb-4">Kontakt</h3>
+            <h3 className="text-white text-xl font-display font-semibold mb-4">Dienstleistungen</h3>
             <ul className="space-y-3">
-              <li className="flex items-center text-gray-400">
-                <Phone size={18} className="text-aa-turquoise mr-3" />
-                <a href="tel:+49123456789" className="hover:text-aa-turquoise transition-colors duration-300">
-                  +49 123 456789
-                </a>
+              <li className="text-gray-400">
+                Gebrauchtwagenkauf
               </li>
-              <li className="flex items-center text-gray-400">
-                <Mail size={18} className="text-aa-turquoise mr-3" />
-                <a href="mailto:info@aa-automobile.de" className="hover:text-aa-turquoise transition-colors duration-300">
-                  info@aa-automobile.de
-                </a>
+              <li className="text-gray-400">
+                Fahrzeugvermittlung
               </li>
-              <li className="flex items-start text-gray-400">
-                <MapPin size={18} className="text-aa-turquoise mr-3 mt-1" />
-                <span>Musterstraße 1, 12345 Musterstadt</span>
+              <li className="text-gray-400">
+                Fahrzeugbewertung
+              </li>
+              <li className="text-gray-400">
+                Finanzierung
               </li>
             </ul>
           </div>
 
-          {/* Opening Hours */}
+          {/* Newsletter */}
           <div>
-            <h3 className="text-white text-xl font-display font-semibold mb-4">Öffnungszeiten</h3>
-            <ul className="space-y-2">
-              <li className="flex justify-between text-gray-400">
-                <span>Montag - Freitag:</span>
-                <span>09:00 - 18:00</span>
-              </li>
-              <li className="flex justify-between text-gray-400">
-                <span>Samstag:</span>
-                <span>10:00 - 14:00</span>
-              </li>
-              <li className="flex justify-between text-gray-400">
-                <span>Sonntag:</span>
-                <span>Geschlossen</span>
-              </li>
-              <li className="text-gray-400 mt-3">
-                <span className="block text-aa-turquoise">Nach Vereinbarung:</span>
-                <span>Termine auch außerhalb der Öffnungszeiten möglich</span>
-              </li>
-            </ul>
+            <h3 className="text-white text-xl font-display font-semibold mb-4">Newsletter</h3>
+            <p className="text-gray-400 mb-4">Abonnieren Sie unseren Newsletter für die neusten Angebote</p>
+            <div className="flex">
+              <input 
+                type="email" 
+                placeholder="Ihre E-Mail Adresse" 
+                className="bg-aa-dark-gray text-gray-300 p-2 rounded-l-md flex-grow focus:outline-none focus:ring-1 focus:ring-aa-turquoise"
+              />
+              <button className="bg-aa-turquoise text-white p-2 rounded-r-md hover:bg-aa-turquoise/80 transition-colors duration-300">
+                Absenden
+              </button>
+            </div>
           </div>
         </div>
 
