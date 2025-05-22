@@ -40,15 +40,15 @@ const HeroSection = () => {
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
           alt="AA Automobile Dealership" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
       
       {/* Hero Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-64 text-center relative z-10">
+      <div className="container mx-auto px-4 pt-32 pb-48 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -89,26 +89,26 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Horizontal Contact Form */}
+      {/* Smaller Contact Form */}
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-5xl mx-auto -mt-24"
+          className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-3xl mx-auto -mt-24"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Termin vereinbaren</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Termin vereinbaren</h3>
           
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+              <div className="grid grid-cols-2 gap-3">
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Name" {...field} className="w-full" required />
+                        <Input placeholder="Name" {...field} className="w-full h-9 text-sm" required />
                       </FormControl>
                     </FormItem>
                   )}
@@ -120,7 +120,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Email" type="email" {...field} className="w-full" required />
+                        <Input placeholder="Email" type="email" {...field} className="w-full h-9 text-sm" required />
                       </FormControl>
                     </FormItem>
                   )}
@@ -132,7 +132,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Telefon" type="tel" {...field} className="w-full" required />
+                        <Input placeholder="Telefon" type="tel" {...field} className="w-full h-9 text-sm" required />
                       </FormControl>
                     </FormItem>
                   )}
@@ -144,7 +144,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Dienstleistung" {...field} className="w-full" />
+                        <Input placeholder="Dienstleistung" {...field} className="w-full h-9 text-sm" />
                       </FormControl>
                     </FormItem>
                   )}
@@ -152,20 +152,20 @@ const HeroSection = () => {
               </div>
               
               <div className="flex flex-col items-center">
-                <Button type="submit" className="bg-aa-turquoise hover:bg-aa-turquoise/90 px-8 py-3 w-full md:w-auto">
+                <Button type="submit" className="bg-aa-turquoise hover:bg-aa-turquoise/90 px-6 py-2 h-9 text-sm w-full md:w-auto">
                   Rückruf anfordern
                 </Button>
                 
-                <div className="mt-4 text-center text-sm text-gray-500">
+                <div className="mt-2 text-center text-xs text-gray-500">
                   Mit dem Absenden stimmen Sie unseren <a href="/datenschutz" className="text-aa-turquoise hover:underline">Datenschutzbestimmungen</a> zu
                 </div>
               </div>
             </form>
           </Form>
           
-          <div className="mt-6 flex items-center gap-2 justify-center">
-            <Phone size={16} className="text-aa-turquoise" />
-            <span className="text-gray-700">Oder rufen Sie uns an: <a href="tel:+49123456789" className="text-aa-turquoise font-semibold">+49 123 456 789</a></span>
+          <div className="mt-4 flex items-center gap-2 justify-center">
+            <Phone size={14} className="text-aa-turquoise" />
+            <span className="text-gray-700 text-sm">Oder rufen Sie uns an: <a href="tel:+49123456789" className="text-aa-turquoise font-semibold">+49 123 456 789</a></span>
           </div>
         </motion.div>
       </div>
