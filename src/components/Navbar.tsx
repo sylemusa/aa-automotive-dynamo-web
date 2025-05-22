@@ -24,7 +24,7 @@ const Navbar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/90 backdrop-blur-md shadow-lg py-3' 
+          ? 'bg-white shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -35,15 +35,25 @@ const Navbar = () => {
             alt="AA Automobile Logo" 
             className="h-12 mr-2" 
           />
-          <span className="text-white font-display text-xl font-bold ml-2">AA Automobile</span>
+          <span className={`font-display text-xl font-bold ml-2 ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            AA Automobile
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="nav-link">Startseite</Link>
-          <Link to="/ueber-uns" className="nav-link">Über uns</Link>
-          <Link to="/dienstleistungen" className="nav-link">Dienstleistungen</Link>
-          <Link to="/kontakt" className="nav-link">Kontakt</Link>
+          <Link to="/" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+            Startseite
+          </Link>
+          <Link to="/ueber-uns" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+            Über uns
+          </Link>
+          <Link to="/dienstleistungen" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+            Dienstleistungen
+          </Link>
+          <Link to="/kontakt" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+            Kontakt
+          </Link>
           <a 
             href="tel:+49123456789" 
             className="flex items-center bg-aa-turquoise text-white px-4 py-2 rounded-lg transition-all hover:shadow-[0_0_10px_rgba(65,182,230,0.5)]"
@@ -65,32 +75,32 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md shadow-lg md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-white py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
+              className="text-gray-700 py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Startseite
             </Link>
             <Link 
               to="/ueber-uns" 
-              className="text-white py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
+              className="text-gray-700 py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Über uns
             </Link>
             <Link 
               to="/dienstleistungen" 
-              className="text-white py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
+              className="text-gray-700 py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Dienstleistungen
             </Link>
             <Link 
               to="/kontakt" 
-              className="text-white py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
+              className="text-gray-700 py-3 px-4 hover:bg-aa-turquoise/10 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Kontakt

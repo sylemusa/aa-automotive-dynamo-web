@@ -36,20 +36,30 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-transparent">
+      {/* Background Image - Full height */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80"
+          alt="AA Automobile Dealership" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+      
       {/* Hero Main Content */}
-      <div className="container mx-auto px-4 pt-16 pb-32 text-center">
+      <div className="container mx-auto px-4 pt-32 pb-64 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
             <span className="text-aa-turquoise">AA</span> Automobile <span className="block text-3xl md:text-4xl mt-2">- Schnell & Zuverlässig</span>
           </h1>
           
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Ihr vertrauenswürdiger Partner für den Gebrauchtwagenverkauf. Auto kaufen oder verkaufen – wir bieten faire Angebote, geprüfte Fahrzeuge & persönliche Beratung.
           </p>
         </motion.div>
@@ -73,30 +83,19 @@ const HeroSection = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-gray-900">10+ Jahre Erfahrung</h3>
-            <p className="text-gray-600">Im Automobilhandel</p>
+            <h3 className="text-xl font-bold text-white">10+ Jahre Erfahrung</h3>
+            <p className="text-white/80">Im Automobilhandel</p>
           </div>
         </motion.div>
       </div>
 
-      {/* Background Image */}
-      <div className="w-full h-96 bg-gray-100 relative">
-        <img 
-          src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80"
-          alt="AA Automobile Dealership" 
-          className="w-full h-full object-cover"
-        />
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
-      </div>
-
       {/* Horizontal Contact Form */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-5xl mx-auto -mt-24 relative z-10"
+          className="bg-white rounded-2xl shadow-lg p-8 max-w-5xl mx-auto -mt-24"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Termin vereinbaren</h3>
           
