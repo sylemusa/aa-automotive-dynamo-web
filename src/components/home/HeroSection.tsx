@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Users, Car, Euro, Phone, Send } from 'lucide-react';
@@ -5,14 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
+
 interface HeroFormData {
   name: string;
   email: string;
   phone: string;
   service: string;
 }
+
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  
   const form = useForm<HeroFormData>({
     defaultValues: {
       name: '',
@@ -21,13 +25,16 @@ const HeroSection = () => {
       service: ''
     }
   });
+
   const handleSubmit = (data: HeroFormData) => {
     console.log('Form submitted:', data);
     // Here you would typically send the data to a server
   };
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
@@ -48,9 +55,12 @@ const HeroSection = () => {
         duration: 0.7,
         delay: 0.2
       }} className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-            <span className="text-aa-turquoise">-Schnell &amp; Zuverlässig</span> Automobile <span className="block text-3xl md:text-4xl mt-2 gradient-text">- Schnell & Zuverlässig</span>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2 text-white">
+            <span className="text-aa-turquoise">-Schnell &amp; Zuverlässig</span> Automobile
           </h1>
+          
+          {/* Separated subtitle with gradient text styling */}
+          <p className="text-3xl md:text-4xl mt-1 mb-4 gradient-text font-bold">- Schnell &amp; Zuverlässig</p>
           
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Ihr vertrauenswürdiger Partner für den Gebrauchtwagenverkauf. Auto kaufen oder verkaufen – wir bieten faire Angebote, geprüfte Fahrzeuge & persönliche Beratung.
@@ -140,4 +150,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
