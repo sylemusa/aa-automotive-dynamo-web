@@ -26,6 +26,30 @@ const TestimonialsSection = () => {
         avatar: "https://randomuser.me/api/portraits/men/67.jpg"
       },
       text: "Kompetente Beratung und kein Druck beim Kauf. Man merkt, dass hier Autofans am Werk sind, die wissen, wovon sie sprechen."
+    },
+    {
+      author: {
+        name: "Sabine Weber",
+        handle: "Neuwagenkäuferin",
+        avatar: "https://randomuser.me/api/portraits/women/54.jpg"
+      },
+      text: "Nach schlechten Erfahrungen mit anderen Händlern bin ich hier endlich richtig beraten worden. Transparente Kommunikation und ehrliche Preise."
+    },
+    {
+      author: {
+        name: "Klaus Hoffmann",
+        handle: "Stammkunde",
+        avatar: "https://randomuser.me/api/portraits/men/42.jpg"
+      },
+      text: "Bereits zum dritten Mal ein Auto hier gekauft. Das spricht wohl für sich! Bin jedes Mal zufrieden mit Service und Fahrzeug."
+    },
+    {
+      author: {
+        name: "Julia Krause",
+        handle: "Erstkäuferin",
+        avatar: "https://randomuser.me/api/portraits/women/29.jpg"
+      },
+      text: "Als Fahranfängerin war ich unsicher, welches Auto zu mir passt. Die Beratung war geduldig und passgenau - jetzt habe ich mein Traumauto!"
     }
   ];
 
