@@ -38,7 +38,8 @@ const HeroSection = () => {
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover" />
-        {/* Removed the black overlay div that was here */}
+        {/* Light black gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-black/20"></div>
       </div>
       
       {/* Hero Main Content */}
