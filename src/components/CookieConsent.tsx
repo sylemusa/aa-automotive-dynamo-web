@@ -64,12 +64,12 @@ const CookieConsent = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-black/95 backdrop-blur-md border-t border-aa-turquoise/30 animate-fade-in">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white shadow-lg border-t border-gray-200 animate-fade-in">
       <div className="container mx-auto">
         <div className="flex justify-between items-start">
           <div className="pr-4">
-            <h3 className="text-white font-semibold text-lg mb-2">Cookie-Einstellungen</h3>
-            <p className="text-gray-300 text-sm mb-4">
+            <h3 className="text-gray-900 font-semibold text-lg mb-2">Cookie-Einstellungen</h3>
+            <p className="text-gray-600 text-sm mb-4">
               Diese Website verwendet Cookies für ein besseres Nutzererlebnis. Sie können auswählen, welche Cookies Sie zulassen möchten.
             </p>
             
@@ -83,7 +83,7 @@ const CookieConsent = () => {
                     disabled
                     className="mr-2 accent-aa-turquoise h-4 w-4"
                   />
-                  <label htmlFor="essential" className="text-white text-sm cursor-not-allowed">
+                  <label htmlFor="essential" className="text-gray-900 text-sm cursor-not-allowed">
                     Essenziell (erforderlich)
                   </label>
                 </div>
@@ -95,7 +95,7 @@ const CookieConsent = () => {
                     onChange={() => handleCheckboxChange('functional')}
                     className="mr-2 accent-aa-turquoise h-4 w-4 cursor-pointer"
                   />
-                  <label htmlFor="functional" className="text-white text-sm cursor-pointer">
+                  <label htmlFor="functional" className="text-gray-900 text-sm cursor-pointer">
                     Funktional (z.B. Formulare, Einstellungen speichern)
                   </label>
                 </div>
@@ -107,7 +107,7 @@ const CookieConsent = () => {
                     onChange={() => handleCheckboxChange('analytics')}
                     className="mr-2 accent-aa-turquoise h-4 w-4 cursor-pointer"
                   />
-                  <label htmlFor="analytics" className="text-white text-sm cursor-pointer">
+                  <label htmlFor="analytics" className="text-gray-900 text-sm cursor-pointer">
                     Analytisch (z.B. Google Analytics)
                   </label>
                 </div>
@@ -119,7 +119,7 @@ const CookieConsent = () => {
                     onChange={() => handleCheckboxChange('marketing')}
                     className="mr-2 accent-aa-turquoise h-4 w-4 cursor-pointer"
                   />
-                  <label htmlFor="marketing" className="text-white text-sm cursor-pointer">
+                  <label htmlFor="marketing" className="text-gray-900 text-sm cursor-pointer">
                     Marketing (z.B. Facebook Pixel)
                   </label>
                 </div>
@@ -129,7 +129,7 @@ const CookieConsent = () => {
           
           <button 
             onClick={() => setVisible(false)} 
-            className="text-white hover:text-aa-turquoise"
+            className="text-gray-500 hover:text-aa-turquoise"
             aria-label="Schließen"
           >
             <X size={24} />
@@ -148,13 +148,13 @@ const CookieConsent = () => {
             <>
               <button
                 onClick={acceptEssential}
-                className="bg-transparent border border-gray-600 text-white px-5 py-2 rounded-lg font-medium text-sm hover:border-aa-turquoise transition-all"
+                className="bg-transparent border border-gray-300 text-gray-700 px-5 py-2 rounded-lg font-medium text-sm hover:border-aa-turquoise transition-all"
               >
                 Nur essenzielle Cookies
               </button>
               <button
                 onClick={() => setSettings(true)}
-                className="bg-transparent border border-gray-600 text-white px-5 py-2 rounded-lg font-medium text-sm hover:border-aa-turquoise transition-all"
+                className="bg-transparent border border-gray-300 text-gray-700 px-5 py-2 rounded-lg font-medium text-sm hover:border-aa-turquoise transition-all"
               >
                 Einstellungen
               </button>

@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import { 
   Car, ShoppingCart, RefreshCw, Truck, 
-  CheckCircle, Shield, ChevronRight 
+  CheckCircle, Shield, ChevronRight, Users, Euro
 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 

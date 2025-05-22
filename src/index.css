@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%; /* Changed from black to white */
+    --foreground: 0 0% 0%; /* Changed from white to black */
 
-    --card: 240 10% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 210 20% 98%; /* Changed to light gray */
+    --card-foreground: 0 0% 0%; /* Changed to black */
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%; /* Changed to white */
+    --popover-foreground: 0 0% 0%; /* Changed to black */
 
-    --primary: 195 77% 58%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 195 77% 58%; /* Kept turquoise */
+    --primary-foreground: 0 0% 100%; /* Kept white for contrast */
 
-    --secondary: 240 10% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 20% 98%; /* Changed to light gray */
+    --secondary-foreground: 0 0% 0%; /* Changed to black */
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 240 5% 75%;
+    --muted: 210 20% 96%; /* Changed to lighter gray */
+    --muted-foreground: 215 16% 47%; /* Changed to darker gray */
 
-    --accent: 195 77% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 195 77% 58%; /* Kept turquoise */
+    --accent-foreground: 0 0% 0%; /* Changed to black */
 
     --destructive: 0 62% 56%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 15%;
-    --input: 240 10% 15%;
-    --ring: 195 77% 58%;
+    --border: 210 20% 90%; /* Changed to lighter gray */
+    --input: 210 20% 90%; /* Changed to lighter gray */
+    --ring: 195 77% 58%; /* Kept turquoise */
 
     --radius: 0.5rem;
   }
@@ -45,12 +45,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-white text-gray-900 font-sans; /* Changed background to white and text to dark */
     scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight;
+    @apply font-display font-bold tracking-tight text-gray-900; /* Changed text to dark */
   }
 }
 
@@ -61,16 +61,16 @@
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-aa-turquoise text-white font-medium rounded-lg px-6 py-3 transition-all duration-300
+    @apply bg-transparent border-2 border-aa-turquoise text-aa-turquoise font-medium rounded-lg px-6 py-3 transition-all duration-300
     hover:bg-aa-turquoise/10 hover:shadow-[0_0_15px_rgba(65,182,230,0.3)];
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900; /* Changed to dark */
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl;
+    @apply text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl; /* Changed to dark gray */
   }
 
   .card-hover {
@@ -78,9 +78,9 @@
   }
 
   .nav-link {
-    @apply relative text-white hover:text-aa-turquoise transition-colors duration-300 after:absolute after:w-full after:h-0.5 
+    @apply relative text-gray-900 hover:text-aa-turquoise transition-colors duration-300 after:absolute after:w-full after:h-0.5 
     after:bg-aa-turquoise after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform 
-    after:duration-300 hover:after:scale-x-100 hover:after:origin-left;
+    after:duration-300 hover:after:scale-x-100 hover:after:origin-left; /* Changed to dark */
   }
 
   .scroll-animation {

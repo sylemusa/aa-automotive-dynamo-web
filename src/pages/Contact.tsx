@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { 
-  Phone, Mail, MapPin, Calendar, CheckCircle
+  Phone, Mail, MapPin, Calendar, CheckCircle, Instagram, Facebook
 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
