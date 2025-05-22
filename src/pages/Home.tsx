@@ -4,12 +4,14 @@ import ServicesSection from '../components/home/ServicesSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import FeaturesSection from '../components/home/FeaturesSection';
 import CTASection from '../components/home/CTASection';
+import UsedCarsCallout from '../components/home/UsedCarsCallout';
 
 const Home = () => {
   return (
     <div className="bg-black min-h-screen">
       <HeroSection />
       <ServicesSection />
+      <UsedCarsCallout />
       <TestimonialsSection />
       <FeaturesSection />
       <CTASection />
