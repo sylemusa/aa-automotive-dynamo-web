@@ -40,15 +40,15 @@ const HeroSection = () => {
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-          alt="AA Automobile Dealership" 
+          src="https://images.unsplash.com/photo-1614200179396-2bdb77383adf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+          alt="AA Automobile Porsche" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-aa-turquoise/30"></div>
       </div>
       
       {/* Hero Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-48 text-center relative z-10">
+      <div className="container mx-auto px-4 pt-32 pb-24 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -69,7 +69,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="flex items-center justify-center gap-6 mb-16"
+          className="flex items-center justify-center gap-6 mb-12"
         >
           <div className="flex -space-x-4">
             <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-100 flex items-center justify-center shadow-lg">
@@ -89,18 +89,18 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Smaller Contact Form */}
+      {/* Smaller Contact Form - Moved higher */}
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-3xl mx-auto -mt-24"
+          className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-5 max-w-2xl mx-auto -mt-8"
         >
-          <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Termin vereinbaren</h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">Termin vereinbaren</h3>
           
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-3">
               <div className="grid grid-cols-2 gap-3">
                 <FormField
                   control={form.control}
@@ -108,7 +108,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Name" {...field} className="w-full h-9 text-sm" required />
+                        <Input placeholder="Name" {...field} className="w-full h-8 text-sm" required />
                       </FormControl>
                     </FormItem>
                   )}
@@ -120,7 +120,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Email" type="email" {...field} className="w-full h-9 text-sm" required />
+                        <Input placeholder="Email" type="email" {...field} className="w-full h-8 text-sm" required />
                       </FormControl>
                     </FormItem>
                   )}
@@ -132,7 +132,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Telefon" type="tel" {...field} className="w-full h-9 text-sm" required />
+                        <Input placeholder="Telefon" type="tel" {...field} className="w-full h-8 text-sm" required />
                       </FormControl>
                     </FormItem>
                   )}
@@ -144,7 +144,7 @@ const HeroSection = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder="Dienstleistung" {...field} className="w-full h-9 text-sm" />
+                        <Input placeholder="Dienstleistung" {...field} className="w-full h-8 text-sm" />
                       </FormControl>
                     </FormItem>
                   )}
@@ -152,7 +152,7 @@ const HeroSection = () => {
               </div>
               
               <div className="flex flex-col items-center">
-                <Button type="submit" className="bg-aa-turquoise hover:bg-aa-turquoise/90 px-6 py-2 h-9 text-sm w-full md:w-auto">
+                <Button type="submit" className="bg-aa-turquoise hover:bg-aa-turquoise/90 px-5 py-1 h-8 text-sm w-full md:w-auto">
                   Rückruf anfordern
                 </Button>
                 
@@ -163,7 +163,7 @@ const HeroSection = () => {
             </form>
           </Form>
           
-          <div className="mt-4 flex items-center gap-2 justify-center">
+          <div className="mt-3 flex items-center gap-2 justify-center">
             <Phone size={14} className="text-aa-turquoise" />
             <span className="text-gray-700 text-sm">Oder rufen Sie uns an: <a href="tel:+49123456789" className="text-aa-turquoise font-semibold">+49 123 456 789</a></span>
           </div>
