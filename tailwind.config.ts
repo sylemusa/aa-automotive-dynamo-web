@@ -62,6 +62,9 @@ export default {
 					'white': '#FFFFFF',
 				}
 			},
+			maxWidth: {
+				container: "1280px",
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -109,6 +112,10 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' },
+				},
+				marquee: {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(calc(-100% - var(--gap)))' }
 				}
 			},
 			animation: {
@@ -118,6 +125,7 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'pulse-glow': 'pulse-glow 2s infinite',
 				'float': 'float 6s ease-in-out infinite',
+				'marquee': 'marquee var(--duration) linear infinite',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
