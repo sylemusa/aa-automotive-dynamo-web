@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Users, Car, Euro, Phone, Send } from 'lucide-react';
@@ -157,7 +158,7 @@ const HeroSection = () => {
                     <FormControl>
                       <div className="relative flex items-center">
                         <Input 
-                          placeholder="Wunschfahrzeug" 
+                          placeholder="Ihre Nachricht" 
                           {...field} 
                           className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" 
                         />
