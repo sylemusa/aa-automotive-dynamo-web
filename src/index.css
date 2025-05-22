@@ -7,32 +7,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Changed from black to white */
-    --foreground: 0 0% 0%; /* Changed from white to black */
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 0%; /* Black */
 
-    --card: 210 20% 98%; /* Changed to light gray */
-    --card-foreground: 0 0% 0%; /* Changed to black */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 0%; /* Black */
 
-    --popover: 0 0% 100%; /* Changed to white */
-    --popover-foreground: 0 0% 0%; /* Changed to black */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 0%; /* Black */
 
     --primary: 195 77% 58%; /* Kept turquoise */
-    --primary-foreground: 0 0% 100%; /* Kept white for contrast */
+    --primary-foreground: 0 0% 100%; /* White for contrast */
 
-    --secondary: 210 20% 98%; /* Changed to light gray */
-    --secondary-foreground: 0 0% 0%; /* Changed to black */
+    --secondary: 0 0% 96%; /* Light gray */
+    --secondary-foreground: 0 0% 0%; /* Black */
 
-    --muted: 210 20% 96%; /* Changed to lighter gray */
-    --muted-foreground: 215 16% 47%; /* Changed to darker gray */
+    --muted: 0 0% 96%; /* Light gray */
+    --muted-foreground: 215 16% 47%; /* Darker gray */
 
     --accent: 195 77% 58%; /* Kept turquoise */
-    --accent-foreground: 0 0% 0%; /* Changed to black */
+    --accent-foreground: 0 0% 0%; /* Black */
 
     --destructive: 0 62% 56%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%; /* Changed to lighter gray */
-    --input: 210 20% 90%; /* Changed to lighter gray */
+    --border: 0 0% 90%; /* Light gray */
+    --input: 0 0% 90%; /* Light gray */
     --ring: 195 77% 58%; /* Kept turquoise */
 
     --radius: 0.5rem;
@@ -45,12 +45,12 @@
   }
 
   body {
-    @apply bg-white text-gray-900 font-sans; /* Changed background to white and text to dark */
+    @apply bg-white text-gray-900 font-sans;
     scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight text-gray-900; /* Changed text to dark */
+    @apply font-display font-bold tracking-tight text-gray-900;
   }
 }
 
@@ -66,11 +66,11 @@
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900; /* Changed to dark */
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900;
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl; /* Changed to dark gray */
+    @apply text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl;
   }
 
   .card-hover {
@@ -80,7 +80,7 @@
   .nav-link {
     @apply relative text-gray-900 hover:text-aa-turquoise transition-colors duration-300 after:absolute after:w-full after:h-0.5 
     after:bg-aa-turquoise after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform 
-    after:duration-300 hover:after:scale-x-100 hover:after:origin-left; /* Changed to dark */
+    after:duration-300 hover:after:scale-x-100 hover:after:origin-left;
   }
 
   .scroll-animation {
