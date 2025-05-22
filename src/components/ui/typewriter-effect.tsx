@@ -1,3 +1,4 @@
+
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -85,7 +86,7 @@ export const TypewriterEffectSmooth = ({
     return <div>
         {wordsArray.map((word, idx) => {
         return <div key={`word-${idx}`} className="inline-block rounded-2xl">
-              {word.text.map((char, index) => <span key={`char-${index}`} className="text-base text-sky-400">
+              {word.text.map((char, index) => <span key={`char-${index}`} className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-aa-turquoise">
                   {char}
                 </span>)}
               &nbsp;
