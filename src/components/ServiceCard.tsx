@@ -9,12 +9,12 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover">
-      <div className="bg-aa-turquoise/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-aa-turquoise">
+    <div className="glass-card rounded-xl p-6 glass-card-hover">
+      <div className="bg-gradient-to-br from-aa-turquoise/20 to-aa-turquoise/5 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 text-aa-turquoise shadow-[0_0_10px_rgba(65,182,230,0.2)]">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-semibold text-gray-100 mb-3">{title}</h3>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
 };

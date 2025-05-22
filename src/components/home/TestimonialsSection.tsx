@@ -4,11 +4,12 @@ import TestimonialCard from '../TestimonialCard';
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-[#0A0A0E] relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-aa-turquoise/5 to-transparent"></div>
+      <div className="container mx-auto px-4 relative">
         <ScrollAnimation>
           <h2 className="section-title text-center">
-            Vertrauenswürdiger Gebrauchtwagenhandel mit Herz
+            <span className="gradient-text">Vertrauenswürdiger Gebrauchtwagenhandel mit Herz</span>
           </h2>
         </ScrollAnimation>
         <ScrollAnimation delay={200}>

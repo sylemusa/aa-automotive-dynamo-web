@@ -7,18 +7,19 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ name, testimonial, image }: TestimonialCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover">
+    <div className="glass-card rounded-xl p-6 glass-card-hover">
       <div className="flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+        <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border border-aa-turquoise/30">
           <img 
             src={image} 
             alt={name} 
             className="w-full h-full object-cover"
           />
         </div>
-        <h3 className="text-gray-900 font-semibold">{name}</h3>
+        <h3 className="text-gray-100 font-semibold">{name}</h3>
       </div>
-      <p className="text-gray-600 italic">"{testimonial}"</p>
+      <p className="text-gray-400 italic">"{testimonial}"</p>
+      <div className="h-1 w-16 bg-gradient-to-r from-aa-turquoise to-transparent rounded mt-4"></div>
     </div>
   );
 };

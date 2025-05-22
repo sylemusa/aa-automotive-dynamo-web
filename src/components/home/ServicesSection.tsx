@@ -5,10 +5,11 @@ import ServiceCard from '../ServiceCard';
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 dark-gradient relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"4\"%3E%3Cpath d=\"M1 3h1v1H1V3zm2-2h1v1H3V1z\" fill=\"white\" fill-opacity=\".5\"%3E%3C/path%3E%3C/svg%3E')"}}></div>
+      <div className="container mx-auto px-4 relative">
         <ScrollAnimation>
-          <h2 className="section-title text-center">Unsere Dienstleistungen</h2>
+          <h2 className="section-title text-center gradient-text">Unsere Dienstleistungen</h2>
         </ScrollAnimation>
         <ScrollAnimation delay={200}>
           <p className="section-subtitle text-center mx-auto">

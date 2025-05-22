@@ -38,7 +38,9 @@ const HeroSection = () => {
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-aa-turquoise/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-aa-dark-gray">
+          <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"4\"%3E%3Cpath d=\"M1 3h1v1H1V3zm2-2h1v1H3V1z\" fill=\"white\" fill-opacity=\".3\"%3E%3C/path%3E%3C/svg%3E')"}}></div>
+        </div>
       </div>
       
       {/* Hero Main Content */}
@@ -54,7 +56,7 @@ const HeroSection = () => {
         delay: 0.2
       }} className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-            <span className="text-aa-turquoise">AA</span> Automobile <span className="block text-3xl md:text-4xl mt-2">- Schnell & Zuverlässig</span>
+            <span className="text-aa-turquoise">AA</span> Automobile <span className="block text-3xl md:text-4xl mt-2 gradient-text">- Schnell & Zuverlässig</span>
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
@@ -72,15 +74,15 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.4
-      }} className="flex items-center justify-center gap-6 mb-8">
+      }} className="flex items-center justify-center gap-6 mb-4">
           <div className="flex -space-x-4">
-            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-100 flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-800/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
               <Users className="text-aa-turquoise" />
             </div>
-            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-100 flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-800/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
               <Car className="text-aa-turquoise" />
             </div>
-            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-100 flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-800/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
               <Euro className="text-aa-turquoise" />
             </div>
           </div>
@@ -95,10 +97,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="max-w-3xl mx-auto bg-black/60 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50 shadow-lg"
+          className="max-w-3xl mx-auto glass-card rounded-lg p-3 my-2 glass-card-hover"
         >
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="grid grid-cols-2 gap-3">
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="grid grid-cols-2 gap-2">
               <FormField
                 control={form.control}
                 name="name"
@@ -108,7 +110,7 @@ const HeroSection = () => {
                       <Input 
                         placeholder="Ihr Name" 
                         {...field} 
-                        className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400"
+                        className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400"
                       />
                     </FormControl>
                   </FormItem>
@@ -125,7 +127,7 @@ const HeroSection = () => {
                         placeholder="Ihre E-Mail" 
                         type="email" 
                         {...field} 
-                        className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400"
+                        className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400"
                       />
                     </FormControl>
                   </FormItem>
@@ -142,7 +144,7 @@ const HeroSection = () => {
                         placeholder="Telefonnummer" 
                         type="tel" 
                         {...field} 
-                        className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400"
+                        className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400"
                       />
                     </FormControl>
                   </FormItem>
@@ -159,14 +161,14 @@ const HeroSection = () => {
                         <Input 
                           placeholder="Wunschfahrzeug" 
                           {...field} 
-                          className="h-9 bg-white/10 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" 
+                          className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" 
                         />
                         <Button 
                           type="submit" 
                           size="sm" 
-                          className="absolute right-0 top-0 bottom-0 h-9 bg-aa-turquoise hover:bg-aa-turquoise/80"
+                          className="absolute right-0 top-0 bottom-0 h-8 bg-aa-turquoise hover:bg-aa-turquoise/80"
                         >
-                          <Send className="w-4 h-4" />
+                          <Send className="w-3 h-3" />
                         </Button>
                       </div>
                     </FormControl>
