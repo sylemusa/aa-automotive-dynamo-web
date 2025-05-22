@@ -22,7 +22,7 @@ const UsedCarsCallout = () => {
   
   return (
     <ScrollAnimation>
-      <div className="bg-gradient-to-b from-black to-aa-dark-gray py-24 px-4">
+      <div className="bg-gradient-to-b from-black to-aa-dark-gray py-28 px-4">
         <div className="container mx-auto text-center">
           <div className="flex justify-center">
             <TypewriterEffectSmooth 
@@ -38,7 +38,7 @@ const UsedCarsCallout = () => {
           </p>
           
           <Link to="/gebrauchtwagen">
-            <RainbowButton className="text-lg px-10 py-5 font-bold">
+            <RainbowButton className="text-lg px-10 py-6 font-bold">
               Gebrauchtwagen entdecken
             </RainbowButton>
           </Link>

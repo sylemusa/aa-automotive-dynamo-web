@@ -17,14 +17,14 @@ const Footer = () => {
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
             title="AA Automobile Standort"
-            className="opacity-75"
+            className="opacity-70" // Verändert von opacity-75
           ></iframe>
         </div>
         
         <div className="container mx-auto py-20 px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-3 bg-gradient-to-r from-white via-white to-aa-turquoise bg-clip-text text-transparent">
-              Get in touch
+              Kontaktieren Sie uns
             </h2>
             <p className="text-gray-300 text-xl mb-10">
               Buchen Sie eine kostenlose Probefahrt oder kaufen Sie ein Auto
@@ -57,7 +57,7 @@ const Footer = () => {
                   <div>
                     <h3 className="text-white text-lg font-semibold mb-2">Rufen Sie uns an</h3>
                     <a href="tel:+49123456789" className="text-gray-300 hover:text-aa-turquoise transition-colors duration-300">
-                      +49 123 456789
+                      +43 123 456789
                     </a>
                   </div>
                 </div>
@@ -71,8 +71,8 @@ const Footer = () => {
                   </div>
                   <div>
                     <h3 className="text-white text-lg font-semibold mb-2">Email kontakt</h3>
-                    <a href="mailto:info@aa-automobile.de" className="text-gray-300 hover:text-aa-turquoise transition-colors duration-300">
-                      info@aa-automobile.de
+                    <a href="mailto:info@aa-automobile.at" className="text-gray-300 hover:text-aa-turquoise transition-colors duration-300">
+                      info@aa-automobile.at
                     </a>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://wa.me/49123456789" 
+                href="https://wa.me/43123456789" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-aa-dark-gray hover:bg-aa-turquoise text-white p-2 rounded-full transition-colors duration-300"
