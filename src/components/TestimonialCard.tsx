@@ -7,9 +7,9 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ name, testimonial, image }: TestimonialCardProps) => {
   return (
-    <div className="glass-card rounded-xl p-6 glass-card-hover">
+    <div className="glass-card rounded-xl p-6 glass-card-hover bg-black/60">
       <div className="flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border border-aa-turquoise/30">
+        <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border border-aa-turquoise/30 shadow-[0_0_10px_rgba(65,182,230,0.15)]">
           <img 
             src={image} 
             alt={name} 

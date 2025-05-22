@@ -7,7 +7,7 @@ import CTASection from '../components/home/CTASection';
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-black min-h-screen">
       <HeroSection />
       <ServicesSection />
       <TestimonialsSection />
