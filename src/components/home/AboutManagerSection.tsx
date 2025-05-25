@@ -13,7 +13,7 @@ const AboutManagerSection = () => {
             <div className="relative">
               <div className="glass-card rounded-2xl overflow-hidden glass-card-hover">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/cb34619e-4d3b-4c13-aa44-7413e1b2d9d9.png" 
                   alt="Geschäftsführer AA Automobile" 
                   className="w-full h-96 object-cover"
                 />
