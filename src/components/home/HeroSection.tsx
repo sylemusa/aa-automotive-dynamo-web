@@ -49,7 +49,8 @@ const HeroSection = () => {
         delay: 0.2
       }} className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2 text-white">
-            <span className="text-aa-turquoise">Wilkommen bei AA</span> Automobile
+            <span className="text-aa-turquoise">Wilkommen bei
+AA</span> Automobile
           </h1>
           
           {/* Separated subtitle with gradient text styling */}
