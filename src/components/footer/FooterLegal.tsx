@@ -8,10 +8,16 @@ const FooterLegal = () => {
         © {new Date().getFullYear()} AA Automobile. Alle Rechte vorbehalten.
       </p>
       <div className="flex flex-wrap gap-4 text-sm">
-        <Link to="/impressum" className="text-gray-400 hover:text-aa-turquoise transition-colors duration-300">
+        <Link 
+          to="/impressum" 
+          className="text-gray-400 hover:text-aa-turquoise transition-colors duration-300 cursor-pointer"
+        >
           Impressum
         </Link>
-        <Link to="/datenschutz" className="text-gray-400 hover:text-aa-turquoise transition-colors duration-300">
+        <Link 
+          to="/datenschutz" 
+          className="text-gray-400 hover:text-aa-turquoise transition-colors duration-300 cursor-pointer"
+        >
           Datenschutz
         </Link>
       </div>
