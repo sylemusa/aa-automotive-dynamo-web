@@ -130,7 +130,7 @@ const Legal = ({
                     <h3 className="text-xl font-semibold text-white mb-4">2. Kontakt zum Datenschutzbeauftragten</h3>
                     <p className="text-gray-300">
                       Bei Fragen zum Datenschutz können Sie sich direkt an uns wenden:<br />
-                      E-Mail: <a href="mailto:datenschutz@aa-automobile.at" className="text-aa-turquoise hover:underline">datenschutz@aa-automobile.at</a>
+                      E-Mail: <a href="mailto:office@aa-automobile.at" className="text-aa-turquoise hover:underline">office@aa-automobile.at</a>
                     </p>
                   </div>
                   
