@@ -23,9 +23,9 @@ const CTASection = () => {
         
         <ScrollAnimation delay={400}>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/kontakt" className="btn-primary">
+            <a href="tel:+436601907710" className="btn-primary">
               Kontakt aufnehmen
-            </Link>
+            </a>
             <Link to="/dienstleistungen" className="btn-secondary">
               Mehr über unsere Dienstleistungen
             </Link>
