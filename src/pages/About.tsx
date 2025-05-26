@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { 
   Users, Shield, Clock, ArrowRight
@@ -30,13 +29,13 @@ const About = () => {
               <div className="relative">
                 <div className="aspect-w-4 aspect-h-3 rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&q=80"
-                    alt="AA Automobile Team" 
+                    src="https://images.unsplash.com/photo-1549317336-206569e8475c?auto=format&fit=crop&q=80"
+                    alt="AA Automobile Autohaus" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-aa-turquoise p-4 rounded-lg text-white">
-                  <p className="font-semibold">Über 10 Jahre</p>
+                  <p className="font-semibold">Über 5 Jahre</p>
                   <p>Erfahrung</p>
                 </div>
               </div>
@@ -48,7 +47,7 @@ const About = () => {
                   Über AA Automobile – Vertrauen durch Erfahrung
                 </h2>
                 <p className="text-gray-300 mb-6">
-                  Als Familienbetrieb mit über 10 Jahren Erfahrung verbinden wir unsere Leidenschaft für Autos mit echter Kundenorientierung. Wir verstehen, dass der Kauf oder Verkauf eines Fahrzeugs eine wichtige Entscheidung ist, und begleiten Sie kompetent durch diesen Prozess.
+                  Als Familienbetrieb mit über 5 Jahren Erfahrung verbinden wir unsere Leidenschaft für Autos mit echter Kundenorientierung. Wir verstehen, dass der Kauf oder Verkauf eines Fahrzeugs eine wichtige Entscheidung ist, und begleiten Sie kompetent durch diesen Prozess.
                 </p>
                 <p className="text-gray-300 mb-8">
                   Unser Ziel ist es, langfristige Kundenbeziehungen aufzubauen, die auf Vertrauen und Zufriedenheit basieren. Viele unserer Kunden kommen immer wieder zu uns zurück oder empfehlen uns an Freunde und Familie weiter – darauf sind wir besonders stolz.
@@ -92,9 +91,9 @@ const About = () => {
                   </div>
                 </div>
                 
-                <Link to="/dienstleistungen" className="btn-primary inline-flex items-center">
+                <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
                   Mehr erfahren <ArrowRight size={16} className="ml-2" />
-                </Link>
+                </a>
               </div>
             </ScrollAnimation>
           </div>
