@@ -14,9 +14,6 @@ const FooterLegal = () => {
         <Link to="/datenschutz" className="text-gray-400 hover:text-aa-turquoise transition-colors duration-300">
           Datenschutz
         </Link>
-        <Link to="/cookies" className="text-gray-400 hover:text-aa-turquoise transition-colors duration-300">
-          Cookie-Einstellungen
-        </Link>
       </div>
     </div>
   );
