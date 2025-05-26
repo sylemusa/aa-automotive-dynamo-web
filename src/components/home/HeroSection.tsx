@@ -5,17 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-
 interface HeroFormData {
   name: string;
   email: string;
   phone: string;
   service: string;
 }
-
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
   const form = useForm<HeroFormData>({
     defaultValues: {
       name: '',
@@ -24,37 +21,33 @@ const HeroSection = () => {
       service: ''
     }
   });
-
   const handleSubmit = (data: HeroFormData) => {
     console.log('Form submitted:', data);
     // Here you would typically send the data to a server
   };
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  return (
-    <section className="relative bg-transparent">
+  return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-          alt="Mercedes S-Class" 
-          className="w-full h-full object-cover brightness-[0.8]" 
-        />
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover brightness-[0.8]" />
         {/* Darker gradient overlay from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
       </div>
       
       {/* Hero Main Content - Increased padding top and bottom */}
       <div className="container mx-auto px-4 pt-40 pb-24 text-center relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : 20
+      }} transition={{
+        duration: 0.7,
+        delay: 0.2
+      }} className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2 text-white">
             <div className="text-aa-turquoise">Wilkommen bei</div>
             <div><span className="text-aa-turquoise">AA</span> Automobile</div>
@@ -91,7 +84,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">10+ Jahre Erfahrung</h3>
+            <h3 className="text-xl font-bold text-white">5+ Jahre Erfahrung</h3>
             <p className="text-white/80">Im Automobilhandel</p>
           </div>
         </motion.div>
@@ -149,8 +142,6 @@ const HeroSection = () => {
           </Form>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
