@@ -1,6 +1,9 @@
+
 import { Link } from 'react-router-dom';
 import { Users, Shield, Clock, ArrowRight } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import AboutManagerSection from '../components/home/AboutManagerSection';
+
 const About = () => {
   return <div className="pt-20">
       {/* Hero Section */}
@@ -35,7 +38,7 @@ const About = () => {
             
             <ScrollAnimation delay={300}>
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Über AA Automobile </h2>
+                <h2 className="text-3xl font-bold text-white mb-6">Über AA Automobile </h2>
                 <p className="text-gray-300 mb-6">
                   Als Familienbetrieb mit über 5 Jahren Erfahrung verbinden wir unsere Leidenschaft für Autos mit echter Kundenorientierung. Wir verstehen, dass der Kauf oder Verkauf eines Fahrzeugs eine wichtige Entscheidung ist, und begleiten Sie kompetent durch diesen Prozess.
                 </p>
@@ -90,66 +93,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-aa-dark-gray to-black">
-        <div className="container mx-auto px-4">
-          <ScrollAnimation>
-            <h2 className="section-title text-center">Unser Team</h2>
-          </ScrollAnimation>
-          <ScrollAnimation delay={200}>
-            <p className="section-subtitle text-center mx-auto">
-              Lernen Sie die Menschen kennen, die AA Automobile zu dem machen, was es ist. Ein Team aus Autoliebhabern mit Leidenschaft für exzellenten Service.
-            </p>
-          </ScrollAnimation>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <ScrollAnimation delay={300}>
-              <div className="bg-aa-dark-gray rounded-xl overflow-hidden card-hover">
-                <div className="aspect-w-3 aspect-h-4">
-                  <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Max Mustermann" className="w-full h-full object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white">Max Mustermann</h3>
-                  <p className="text-aa-turquoise mb-4">Gründer & Geschäftsführer</p>
-                  <p className="text-gray-400">
-                    Über 15 Jahre Erfahrung in der Automobilbranche. Setzt sich persönlich für jeden Kunden ein.
-                  </p>
-                </div>
-              </div>
-            </ScrollAnimation>
-            
-            <ScrollAnimation delay={400}>
-              <div className="bg-aa-dark-gray rounded-xl overflow-hidden card-hover">
-                <div className="aspect-w-3 aspect-h-4">
-                  <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Lisa Wagner" className="w-full h-full object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white">Lisa Wagner</h3>
-                  <p className="text-aa-turquoise mb-4">Kundenberaterin</p>
-                  <p className="text-gray-400">
-                    Findet für jeden Kunden das passende Fahrzeug. Bekannt für ihre ehrliche und freundliche Beratung.
-                  </p>
-                </div>
-              </div>
-            </ScrollAnimation>
-            
-            <ScrollAnimation delay={500}>
-              <div className="bg-aa-dark-gray rounded-xl overflow-hidden card-hover">
-                <div className="aspect-w-3 aspect-h-4">
-                  <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Thomas Weber" className="w-full h-full object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white">Thomas Weber</h3>
-                  <p className="text-aa-turquoise mb-4">Technischer Experte</p>
-                  <p className="text-gray-400">
-                    Ehemaliger KFZ-Meister mit Auge fürs Detail. Prüft jedes Fahrzeug auf Herz und Nieren.
-                  </p>
-                </div>
-              </div>
-            </ScrollAnimation>
-          </div>
-        </div>
-      </section>
+      {/* Manager Section */}
+      <AboutManagerSection />
 
       {/* Values Section */}
       <section className="py-20 bg-black">
