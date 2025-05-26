@@ -1,8 +1,7 @@
-
 import { Link } from 'react-router-dom';
 import { 
   Car, ShoppingCart, RefreshCw, Truck, 
-  CheckCircle, Shield, ChevronRight, Users, Euro
+  CheckCircle, Shield, PhoneCall, Users, Euro
 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -59,9 +58,9 @@ const Services = () => {
                   </li>
                 </ul>
                 
-                <Link to="/kontakt" className="btn-primary inline-flex items-center">
-                  Verfügbare Fahrzeuge anfragen <ChevronRight size={16} className="ml-2" />
-                </Link>
+                <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
+                  Jetzt anrufen <PhoneCall size={16} className="ml-2" />
+                </a>
               </div>
             </ScrollAnimation>
             
@@ -119,9 +118,9 @@ const Services = () => {
                   </li>
                 </ul>
                 
-                <Link to="/kontakt" className="btn-primary inline-flex items-center">
-                  Fahrzeug bewerten lassen <ChevronRight size={16} className="ml-2" />
-                </Link>
+                <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
+                  Jetzt anrufen <PhoneCall size={16} className="ml-2" />
+                </a>
               </div>
             </ScrollAnimation>
           </div>
@@ -159,9 +158,9 @@ const Services = () => {
                   </li>
                 </ul>
                 
-                <Link to="/kontakt" className="btn-primary inline-flex items-center">
-                  Vermittlungsservice anfragen <ChevronRight size={16} className="ml-2" />
-                </Link>
+                <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
+                  Jetzt anrufen <PhoneCall size={16} className="ml-2" />
+                </a>
               </div>
             </ScrollAnimation>
             
@@ -219,9 +218,9 @@ const Services = () => {
                   </li>
                 </ul>
                 
-                <Link to="/kontakt" className="btn-primary inline-flex items-center">
-                  Überführung anfragen <ChevronRight size={16} className="ml-2" />
-                </Link>
+                <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
+                  Jetzt anrufen <PhoneCall size={16} className="ml-2" />
+                </a>
               </div>
             </ScrollAnimation>
           </div>
@@ -294,9 +293,9 @@ const Services = () => {
             </p>
           </ScrollAnimation>
           <ScrollAnimation delay={300}>
-            <Link to="/kontakt" className="btn-primary">
-              Jetzt Kontakt aufnehmen
-            </Link>
+            <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
+              Jetzt anrufen <PhoneCall size={16} className="ml-2" />
+            </a>
           </ScrollAnimation>
         </div>
       </section>
