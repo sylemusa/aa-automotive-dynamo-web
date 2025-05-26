@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom';
-import { 
-  Car, ShoppingCart, RefreshCw, Truck, 
-  CheckCircle, Shield, PhoneCall, Users, Euro
-} from 'lucide-react';
+import { Car, ShoppingCart, RefreshCw, Truck, CheckCircle, Shield, PhoneCall, Users, Euro } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
-
 const Services = () => {
-  return (
-    <div className="pt-20">
+  return <div className="pt-20">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-b from-black to-aa-dark-gray">
         <div className="container mx-auto px-4">
@@ -66,11 +61,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80"
-                  alt="Auto kaufen bei AA Automobile" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80" alt="Auto kaufen bei AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
           </div>
@@ -79,11 +70,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1627073368822-486f980cad7e?auto=format&fit=crop&q=80"
-                  alt="Auto verkaufen bei AA Automobile" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1627073368822-486f980cad7e?auto=format&fit=crop&q=80" alt="Auto verkaufen bei AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
             
@@ -140,10 +127,7 @@ const Services = () => {
                 </p>
                 
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <CheckCircle size={20} className="text-aa-turquoise mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Deutschlandweite Suche nach Ihrem Wunschfahrzeug</span>
-                  </li>
+                  
                   <li className="flex items-start">
                     <CheckCircle size={20} className="text-aa-turquoise mr-3 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">Bestpreisermittlung beim Verkauf</span>
@@ -166,11 +150,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?auto=format&fit=crop&q=80"
-                  alt="Autovermittlung bei AA Automobile" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?auto=format&fit=crop&q=80" alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
           </div>
@@ -179,11 +159,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80"
-                  alt="Fahrzeugüberführung durch AA Automobile" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80" alt="Fahrzeugüberführung durch AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
             
@@ -299,8 +275,6 @@ const Services = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
