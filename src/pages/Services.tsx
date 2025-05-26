@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Car, ShoppingCart, RefreshCw, Truck, CheckCircle, Shield, PhoneCall, Users, Euro } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
-
 const Services = () => {
   return <div className="pt-20">
       {/* Hero Section */}
@@ -151,7 +150,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=800&h=600" alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" />
+                <img alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" src="/lovable-uploads/65746b57-431f-426d-93fb-e5a84b1243b9.png" />
               </div>
             </ScrollAnimation>
           </div>
@@ -160,7 +159,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=800&h=600" alt="Fahrzeugüberführung durch AA Automobile" className="w-full h-full object-cover" />
+                <img alt="Fahrzeugüberführung durch AA Automobile" className="w-full h-full object-cover" src="/lovable-uploads/40a64592-a92f-40bc-9d67-2c0a16ebad3f.png" />
               </div>
             </ScrollAnimation>
             
@@ -275,5 +274,4 @@ const Services = () => {
       </section>
     </div>;
 };
-
 export default Services;
