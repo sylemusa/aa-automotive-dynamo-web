@@ -72,7 +72,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&q=80&w=800&h=600" alt="Auto verkaufen bei AA Automobile" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800&h=600" alt="Auto verkaufen bei AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
             
@@ -152,7 +152,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800&h=600" alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800&h=600" alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
           </div>
