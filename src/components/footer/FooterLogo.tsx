@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook } from 'lucide-react';
 const FooterLogo = () => {
@@ -10,10 +11,10 @@ const FooterLogo = () => {
         Ihr vertrauenswürdiger Partner für den Gebrauchtwagenhandel. Persönlich, fair und zuverlässig.
       </p>
       <div className="flex space-x-4 pt-2">
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-aa-dark-gray hover:bg-aa-turquoise text-white p-2 rounded-full transition-colors duration-300" aria-label="Instagram">
+        <a href="https://www.instagram.com/aa_automobile.at?utm_source=qr&igsh=MXRleHJmNHZvMXlicQ%3D%3D" target="_blank" rel="noopener noreferrer" className="bg-aa-dark-gray hover:bg-aa-turquoise text-white p-2 rounded-full transition-colors duration-300" aria-label="Instagram">
           <Instagram size={20} />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-aa-dark-gray hover:bg-aa-turquoise text-white p-2 rounded-full transition-colors duration-300" aria-label="Facebook">
+        <a href="https://www.facebook.com/profile.php?id=61576090841785&rdid=Ds4os47FrpHM2OKG&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17jo93ejq4%2F" target="_blank" rel="noopener noreferrer" className="bg-aa-dark-gray hover:bg-aa-turquoise text-white p-2 rounded-full transition-colors duration-300" aria-label="Facebook">
           <Facebook size={20} />
         </a>
         <a href="https://wa.me/43123456789" target="_blank" rel="noopener noreferrer" className="bg-aa-dark-gray hover:bg-aa-turquoise text-white p-2 rounded-full transition-colors duration-300" aria-label="WhatsApp">
