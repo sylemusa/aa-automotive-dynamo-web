@@ -1,33 +1,15 @@
+
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { Users, Car, Euro, Phone, Send } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-interface HeroFormData {
-  name: string;
-  email: string;
-  phone: string;
-  service: string;
-}
+import { Users, Car, Euro, Phone, MapPin, Mail } from 'lucide-react';
+
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const form = useForm<HeroFormData>({
-    defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      service: ''
-    }
-  });
-  const handleSubmit = (data: HeroFormData) => {
-    console.log('Form submitted:', data);
-    // Here you would typically send the data to a server
-  };
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
   return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
@@ -89,7 +71,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
         
-        {/* Thin Contact Form */}
+        {/* Contact Information Card */}
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -99,49 +81,61 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.6
-      }} className="max-w-3xl mx-auto glass-card rounded-lg p-3 my-2 glass-card-hover">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="grid grid-cols-2 gap-2">
-              <FormField control={form.control} name="name" render={({
-              field
-            }) => <FormItem className="space-y-1">
-                    <FormControl>
-                      <Input placeholder="Ihr Name" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400" />
-                    </FormControl>
-                  </FormItem>} />
+      }} className="max-w-3xl mx-auto glass-card rounded-lg p-6 my-2 glass-card-hover">
+          <div className="text-center mb-4">
+            <h3 className="text-2xl font-bold text-white mb-2">Kontaktieren Sie uns</h3>
+            <p className="text-white/80">Besuchen Sie uns oder rufen Sie an – wir beraten Sie gerne!</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Address */}
+            <div className="flex items-start gap-4 bg-black/20 rounded-lg p-4">
+              <div className="w-10 h-10 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-5 h-5 text-aa-turquoise" />
+              </div>
+              <div className="text-left">
+                <h4 className="text-white font-semibold mb-1">Unser Standort</h4>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  AA Automobile<br />
+                  Musterstraße 123<br />
+                  1010 Wien<br />
+                  Österreich
+                </p>
+              </div>
+            </div>
+            
+            {/* Contact Details */}
+            <div className="space-y-4">
+              {/* Phone */}
+              <div className="flex items-center gap-4 bg-black/20 rounded-lg p-4">
+                <div className="w-10 h-10 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-aa-turquoise" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-white font-semibold mb-1">Telefon</h4>
+                  <a href="tel:+431234567890" className="text-aa-turquoise hover:text-aa-turquoise/80 transition-colors">
+                    +43 1 234 567 890
+                  </a>
+                </div>
+              </div>
               
-              <FormField control={form.control} name="email" render={({
-              field
-            }) => <FormItem className="space-y-1">
-                    <FormControl>
-                      <Input placeholder="Ihre E-Mail" type="email" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400" />
-                    </FormControl>
-                  </FormItem>} />
-              
-              <FormField control={form.control} name="phone" render={({
-              field
-            }) => <FormItem className="space-y-1">
-                    <FormControl>
-                      <Input placeholder="Telefonnummer" type="tel" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400" />
-                    </FormControl>
-                  </FormItem>} />
-              
-              <FormField control={form.control} name="service" render={({
-              field
-            }) => <FormItem className="space-y-1">
-                    <FormControl>
-                      <div className="relative flex items-center">
-                        <Input placeholder="Ihre Nachricht" {...field} className="h-8 bg-black/30 border-gray-700/50 text-white placeholder:text-gray-400 pr-10" />
-                        <Button type="submit" size="sm" className="absolute right-0 top-0 bottom-0 h-8 bg-aa-turquoise hover:bg-aa-turquoise/80">
-                          <Send className="w-3 h-3" />
-                        </Button>
-                      </div>
-                    </FormControl>
-                  </FormItem>} />
-            </form>
-          </Form>
+              {/* Email */}
+              <div className="flex items-center gap-4 bg-black/20 rounded-lg p-4">
+                <div className="w-10 h-10 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-aa-turquoise" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-white font-semibold mb-1">E-Mail</h4>
+                  <a href="mailto:office@aa-automobile.at" className="text-aa-turquoise hover:text-aa-turquoise/80 transition-colors">
+                    office@aa-automobile.at
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>;
 };
+
 export default HeroSection;
