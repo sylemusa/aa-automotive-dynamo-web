@@ -1,11 +1,14 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  
+  // Check if we're on the home page
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +23,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // For subpages, always use dark background
+  const shouldUseDarkBg = !isHomePage || scrolled;
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white shadow-md py-3' 
+        shouldUseDarkBg
+          ? 'bg-aa-dark-gray shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -35,37 +41,37 @@ const Navbar = () => {
             alt="AA Automobile Logo" 
             className="h-12 mr-2" 
           />
-          <span className={`font-display text-xl font-bold ml-2 ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+          <span className={`font-display text-xl font-bold ml-2 ${shouldUseDarkBg ? 'text-white' : 'text-white'}`}>
             AA Automobile
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+          <Link to="/" className={`${shouldUseDarkBg ? 'text-gray-300 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
             Startseite
           </Link>
-          <Link to="/ueber-uns" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+          <Link to="/ueber-uns" className={`${shouldUseDarkBg ? 'text-gray-300 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
             Über uns
           </Link>
-          <Link to="/dienstleistungen" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+          <Link to="/dienstleistungen" className={`${shouldUseDarkBg ? 'text-gray-300 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
             Dienstleistungen
           </Link>
-          <Link to="/kontakt" className={`${scrolled ? 'text-gray-700 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
+          <Link to="/kontakt" className={`${shouldUseDarkBg ? 'text-gray-300 hover:text-aa-turquoise' : 'text-white hover:text-aa-turquoise'} transition-colors duration-300`}>
             Kontakt
           </Link>
           <a 
-            href="tel:+49123456789" 
+            href="tel:+43660190710" 
             className="flex items-center bg-aa-turquoise text-white px-4 py-2 rounded-lg transition-all hover:shadow-[0_0_10px_rgba(65,182,230,0.5)]"
           >
             <PhoneCall size={18} className="mr-2" />
-            <span>+49 123 456789</span>
+            <span>+43 660 1907710</span>
           </a>
         </nav>
 
         {/* Mobile menu button */}
         <button 
-          className={`md:hidden ${scrolled ? 'text-gray-900' : 'text-white'}`}
+          className={`md:hidden ${shouldUseDarkBg ? 'text-white' : 'text-white'}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -75,7 +81,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-aa-dark-gray shadow-lg md:hidden">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link 
               to="/" 
