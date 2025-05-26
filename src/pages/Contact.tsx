@@ -122,7 +122,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-aa-turquoise"
-                          placeholder="+49 123 456789"
+                          placeholder="+43 660 1907710"
                         />
                       </div>
                     </div>
@@ -183,8 +183,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-white font-semibold">Telefon</h3>
-                        <a href="tel:+49123456789" className="text-gray-300 hover:text-aa-turquoise transition-colors">
-                          +49 123 456789
+                        <a href="tel:+436601907710" className="text-gray-300 hover:text-aa-turquoise transition-colors">
+                          +43 660 1907710
                         </a>
                       </div>
                     </div>
@@ -195,8 +195,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-white font-semibold">E-Mail</h3>
-                        <a href="mailto:info@aa-automobile.de" className="text-gray-300 hover:text-aa-turquoise transition-colors">
-                          info@aa-automobile.de
+                        <a href="mailto:office@aa-automobile.at" className="text-gray-300 hover:text-aa-turquoise transition-colors">
+                          office@aa-automobile.at
                         </a>
                       </div>
                     </div>
@@ -208,9 +208,9 @@ const Contact = () => {
                       <div>
                         <h3 className="text-white font-semibold">Adresse</h3>
                         <p className="text-gray-300">
-                          Musterstraße 1<br />
-                          12345 Musterstadt<br />
-                          Deutschland
+                          Gewerbestr. 4<br />
+                          4072 Alkoven<br />
+                          Österreich
                         </p>
                       </div>
                     </div>
@@ -261,7 +261,7 @@ const Contact = () => {
                       <Facebook size={24} />
                     </a>
                     <a 
-                      href="https://wa.me/49123456789" 
+                      href="https://wa.me/436601907710" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-black hover:bg-aa-turquoise text-white p-3 rounded-full transition-colors duration-300"
@@ -302,7 +302,7 @@ const Contact = () => {
           <ScrollAnimation delay={200}>
             <div className="rounded-xl overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.654394664273!2d13.372469776926151!3d52.50793287205107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sBrandenburger%20Tor!5e0!3m2!1sde!2sde!4v1714584985151!5m2!1sde!2sde" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2647.123456789!2d14.1167890!3d48.2345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773a1b2c3d4e5f6%3A0x7g8h9i0j1k2l3m4n!2sGewerbestr.%204%2C%204072%20Alkoven%2C%20Austria!5e0!3m2!1sde!2sat!4v1640995200000!5m2!1sde!2sat" 
                 width="100%" 
                 height="450" 
                 style={{ border: 0 }} 
@@ -330,9 +330,9 @@ const Contact = () => {
             </p>
           </ScrollAnimation>
           <ScrollAnimation delay={300}>
-            <a href="tel:+49123456789" className="btn-primary inline-flex items-center">
+            <a href="tel:+436601907710" className="btn-primary inline-flex items-center">
               <Phone size={18} className="mr-2" />
-              +49 123 456789
+              +43 660 1907710
             </a>
           </ScrollAnimation>
         </div>
