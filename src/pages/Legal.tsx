@@ -1,13 +1,11 @@
-
 import ScrollAnimation from '../components/ScrollAnimation';
-
 interface LegalProps {
   type: 'impressum' | 'datenschutz';
 }
-
-const Legal = ({ type }: LegalProps) => {
-  return (
-    <div className="pt-20">
+const Legal = ({
+  type
+}: LegalProps) => {
+  return <div className="pt-20">
       {/* Header Section */}
       <section className="py-16 bg-gradient-to-b from-black to-aa-dark-gray">
         <div className="container mx-auto px-4">
@@ -24,8 +22,7 @@ const Legal = ({ type }: LegalProps) => {
         <div className="container mx-auto px-4">
           <div className="bg-aa-dark-gray p-8 rounded-xl shadow-lg">
             <ScrollAnimation>
-              {type === 'impressum' ? (
-                <div className="prose prose-invert max-w-none">
+              {type === 'impressum' ? <div className="prose prose-invert max-w-none">
                   <h2 className="text-2xl font-bold text-white mb-6">Impressum</h2>
                   
                   <div className="mb-8">
@@ -64,13 +61,7 @@ const Legal = ({ type }: LegalProps) => {
                     </p>
                   </div>
                   
-                  <div className="mb-8">
-                    <h3 className="text-xl font-semibold text-white mb-4">Umsatzsteuer-Identifikationsnummer</h3>
-                    <p className="text-gray-300">
-                      UID-Nr.: ATU12345678<br />
-                      (Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG)
-                    </p>
-                  </div>
+                  
                   
                   <div className="mb-8">
                     <h3 className="text-xl font-semibold text-white mb-4">Anwendbares Recht</h3>
@@ -110,9 +101,7 @@ const Legal = ({ type }: LegalProps) => {
                       Die Inhalte und Werke auf dieser Website unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors bzw. Erstellers.
                     </p>
                   </div>
-                </div>
-              ) : (
-                <div className="prose prose-invert max-w-none">
+                </div> : <div className="prose prose-invert max-w-none">
                   <h2 className="text-2xl font-bold text-white mb-6">Datenschutzerklärung</h2>
                   
                   <div className="mb-8">
@@ -223,14 +212,11 @@ const Legal = ({ type }: LegalProps) => {
                       Stand: {new Date().toLocaleDateString('de-AT')}
                     </p>
                   </div>
-                </div>
-              )}
+                </div>}
             </ScrollAnimation>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Legal;
