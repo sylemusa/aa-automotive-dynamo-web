@@ -70,7 +70,7 @@ const VehiclesPlatformSection = () => {
               </p>
               <Button 
                 className="bg-aa-turquoise hover:bg-aa-turquoise/80 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(65,182,230,0.5)] hover:scale-105"
-                onClick={() => window.open('https://your-vehicle-platform.com', '_blank')}
+                onClick={() => window.open('https://www.autoscout24.at/haendler/aa-automobile-e-u', '_blank')}
               >
                 <ExternalLink className="mr-2" size={20} />
                 Zu unseren Fahrzeugen
