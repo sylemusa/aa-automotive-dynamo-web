@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -61,7 +62,7 @@ const Navbar = () => {
             Kontakt
           </Link>
           <a 
-            href="tel:+43660190710" 
+            href="tel:+436601907710" 
             className="flex items-center bg-aa-turquoise text-white px-4 py-2 rounded-lg transition-all hover:shadow-[0_0_10px_rgba(65,182,230,0.5)]"
           >
             <PhoneCall size={18} className="mr-2" />
@@ -112,12 +113,12 @@ const Navbar = () => {
               Kontakt
             </Link>
             <a 
-              href="tel:+49123456789" 
+              href="tel:+436601907710" 
               className="flex items-center justify-center bg-aa-turquoise text-white px-4 py-3 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               <PhoneCall size={18} className="mr-2" />
-              <span>+49 123 456789</span>
+              <span>+43 660 1907710</span>
             </a>
           </div>
         </div>
