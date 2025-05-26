@@ -161,7 +161,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800&h=600" alt="Fahrzeugüberführung durch AA Automobile" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=800&h=600" alt="Fahrzeugüberführung durch AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
             
