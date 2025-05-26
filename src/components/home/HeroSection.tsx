@@ -1,15 +1,11 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Users, Car, Euro, Phone, MapPin, Mail } from 'lucide-react';
-
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   return <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
@@ -81,7 +77,7 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.6
-      }} className="max-w-3xl mx-auto glass-card rounded-lg p-6 my-2 glass-card-hover">
+      }} className="max-w-3xl mx-auto glass-card rounded-lg p-6 my-2 glass-card-hover px-[24px]">
           <div className="text-center mb-4">
             <h3 className="text-2xl font-bold text-white mb-2">Kontaktieren Sie uns</h3>
             <p className="text-white/80">Besuchen Sie uns oder rufen Sie an – wir beraten Sie gerne!</p>
@@ -137,5 +133,4 @@ const HeroSection = () => {
       </div>
     </section>;
 };
-
 export default HeroSection;
