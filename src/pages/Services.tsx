@@ -176,10 +176,7 @@ const Services = () => {
                 </p>
                 
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <CheckCircle size={20} className="text-aa-turquoise mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">Bundesweiter Überführungsservice</span>
-                  </li>
+                  
                   <li className="flex items-start">
                     <CheckCircle size={20} className="text-aa-turquoise mr-3 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">Vollständig versichert</span>
