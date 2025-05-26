@@ -53,7 +53,7 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.4
-      }} className="flex items-center justify-center gap-6 mb-4">
+      }} className="flex items-center justify-center gap-6 mb-6">
           <div className="flex -space-x-4">
             <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-800/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
               <Users className="text-aa-turquoise" />
@@ -71,7 +71,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
         
-        {/* Contact Information Card */}
+        {/* Compact Contact Information Card */}
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -81,53 +81,46 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.6
-      }} className="max-w-3xl mx-auto glass-card rounded-lg p-6 my-2 glass-card-hover">
-          <div className="text-center mb-4">
-            <h3 className="text-2xl font-bold text-white mb-2">Kontaktieren Sie uns</h3>
-            <p className="text-white/80">Besuchen Sie uns oder rufen Sie an – wir beraten Sie gerne!</p>
+      }} className="max-w-xl mx-auto glass-card rounded-lg p-4 glass-card-hover">
+          <div className="text-center mb-3">
+            <h3 className="text-lg font-bold text-white mb-1">Kontakt</h3>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-3">
             {/* Address */}
-            <div className="flex items-start gap-4 bg-black/20 rounded-lg p-4">
-              <div className="w-10 h-10 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-5 h-5 text-aa-turquoise" />
+            <div className="flex items-center gap-3 bg-black/20 rounded-lg p-3">
+              <div className="w-8 h-8 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-4 h-4 text-aa-turquoise" />
               </div>
-              <div className="text-left">
-                <h4 className="text-white font-semibold mb-1">Unser Standort</h4>
-                <p className="text-white/90 text-sm leading-relaxed">
-                  AA Automobile<br />
-                  Musterstraße 123<br />
-                  1010 Wien<br />
-                  Österreich
+              <div className="text-left text-sm">
+                <p className="text-white/90 leading-relaxed">
+                  Gewerbestr. 4, 4072 Alkoven, Österreich
                 </p>
               </div>
             </div>
             
-            {/* Contact Details */}
-            <div className="space-y-4">
+            {/* Phone and Email in one row */}
+            <div className="grid grid-cols-2 gap-3">
               {/* Phone */}
-              <div className="flex items-center gap-4 bg-black/20 rounded-lg p-4">
-                <div className="w-10 h-10 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-aa-turquoise" />
+              <div className="flex items-center gap-2 bg-black/20 rounded-lg p-3">
+                <div className="w-8 h-8 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 h-4 text-aa-turquoise" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-white font-semibold mb-1">Telefon</h4>
-                  <a href="tel:+431234567890" className="text-aa-turquoise hover:text-aa-turquoise/80 transition-colors">
-                    +43 1 234 567 890
+                  <a href="tel:+436601907710" className="text-aa-turquoise hover:text-aa-turquoise/80 transition-colors text-sm">
+                    +43 660 1907710
                   </a>
                 </div>
               </div>
               
               {/* Email */}
-              <div className="flex items-center gap-4 bg-black/20 rounded-lg p-4">
-                <div className="w-10 h-10 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-aa-turquoise" />
+              <div className="flex items-center gap-2 bg-black/20 rounded-lg p-3">
+                <div className="w-8 h-8 rounded-full bg-aa-turquoise/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 text-aa-turquoise" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-white font-semibold mb-1">E-Mail</h4>
-                  <a href="mailto:office@aa-automobile.at" className="text-aa-turquoise hover:text-aa-turquoise/80 transition-colors">
-                    office@aa-automobile.at
+                  <a href="mailto:office@aa-automobile.at" className="text-aa-turquoise hover:text-aa-turquoise/80 transition-colors text-sm">
+                    E-Mail
                   </a>
                 </div>
               </div>
