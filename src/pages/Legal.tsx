@@ -1,7 +1,11 @@
 
 import ScrollAnimation from '../components/ScrollAnimation';
 
-const Legal = ({ type }) => {
+interface LegalProps {
+  type: 'impressum' | 'datenschutz';
+}
+
+const Legal = ({ type }: LegalProps) => {
   return (
     <div className="pt-20">
       {/* Header Section */}
@@ -22,95 +26,88 @@ const Legal = ({ type }) => {
             <ScrollAnimation>
               {type === 'impressum' ? (
                 <div className="prose prose-invert max-w-none">
-                  <h2 className="text-2xl font-bold text-white mb-6">Angaben gemäß § 5 TMG</h2>
+                  <h2 className="text-2xl font-bold text-white mb-6">Impressum</h2>
                   
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Unternehmensangaben</h3>
                     <p className="text-gray-300">
-                      AA Automobile<br />
-                      Max Mustermann<br />
-                      Musterstraße 1<br />
-                      12345 Musterstadt
+                      AA Automobile e.U.<br />
+                      Gewerbestr. 4<br />
+                      4072 Alkoven<br />
+                      Österreich
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">Kontakt</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Kontaktdaten</h3>
                     <p className="text-gray-300">
-                      Telefon: +49 123 456789<br />
-                      E-Mail: info@aa-automobile.de
+                      Telefon: <a href="tel:+436601907710" className="text-aa-turquoise hover:underline">+43 660 1907710</a><br />
+                      E-Mail: <a href="mailto:office@aa-automobile.at" className="text-aa-turquoise hover:underline">office@aa-automobile.at</a><br />
+                      Website: www.aa-automobile.at
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">Umsatzsteuer-ID</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Unternehmensgegenstand</h3>
                     <p className="text-gray-300">
-                      Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                      DE123456789
+                      Kraftfahrzeughandel, Kraftfahrzeugreparatur, Kraftfahrzeugvermietung<br />
+                      Gewerbe: Kraftfahrzeughandel und Kraftfahrzeugreparatur
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Aufsichtsbehörde/Gewerbebehörde</h3>
                     <p className="text-gray-300">
-                      Berufsbezeichnung: KFZ-Handel<br />
-                      Zuständige Kammer: Industrie- und Handelskammer Musterstadt<br />
-                      Verliehen in: Deutschland
+                      Bezirkshauptmannschaft Eferding<br />
+                      Berufsbezeichnung: Kraftfahrzeughändler<br />
+                      Verleihungsstaat: Österreich
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">Streitschlichtung</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Umsatzsteuer-Identifikationsnummer</h3>
                     <p className="text-gray-300">
-                      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                      <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-aa-turquoise hover:underline">
+                      UID-Nr.: ATU12345678<br />
+                      (Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG)
+                    </p>
+                  </div>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Anwendbares Recht</h3>
+                    <p className="text-gray-300">
+                      Es gilt österreichisches Recht unter Ausschluss der Verweisungsnormen des internationalen Privatrechts und unter Ausschluss des UN-Kaufrechts.
+                    </p>
+                  </div>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Gerichtsstand</h3>
+                    <p className="text-gray-300">
+                      Gerichtsstand ist, soweit gesetzlich zulässig, das sachlich zuständige Gericht in Eferding, Österreich.
+                    </p>
+                  </div>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Online-Streitbeilegung</h3>
+                    <p className="text-gray-300">
+                      Plattform der Europäischen Kommission zur Online-Streitbeilegung (OS) für Verbraucher: 
+                      <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-aa-turquoise hover:underline ml-1">
                         https://ec.europa.eu/consumers/odr/
-                      </a>.<br />
-                      Unsere E-Mail-Adresse finden Sie oben im Impressum.
-                    </p>
-                    <p className="text-gray-300 mt-4">
-                      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                      </a><br />
+                      Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">Haftung für Inhalte</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">Haftungsausschluss</h3>
                     <p className="text-gray-300">
-                      Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. 
-                      Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu 
-                      überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                    </p>
-                    <p className="text-gray-300 mt-4">
-                      Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. 
-                      Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden 
-                      von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                      Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Alle Angaben erfolgen ohne Gewähr. Änderungen und Irrtümer vorbehalten.
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">Haftung für Links</h3>
-                  <div className="mb-8">
-                    <p className="text-gray-300">
-                      Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese 
-                      fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der 
-                      Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige 
-                      Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
-                    </p>
-                    <p className="text-gray-300 mt-4">
-                      Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. 
-                      Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-                    </p>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-4">Urheberrecht</h3>
                   <div>
+                    <h3 className="text-xl font-semibold text-white mb-4">Urheberrecht</h3>
                     <p className="text-gray-300">
-                      Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, 
-                      Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des 
-                      jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
-                    </p>
-                    <p className="text-gray-300 mt-4">
-                      Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden 
-                      Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen 
-                      entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                      Die Inhalte und Werke auf dieser Website unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors bzw. Erstellers.
                     </p>
                   </div>
                 </div>
@@ -120,92 +117,110 @@ const Legal = ({ type }) => {
                   
                   <div className="mb-8">
                     <p className="text-gray-300">
-                      Wir freuen uns über Ihr Interesse an unserem Unternehmen. Datenschutz hat einen besonders hohen Stellenwert für die Geschäftsleitung der 
-                      AA Automobile. Eine Nutzung der Internetseiten der AA Automobile ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. 
-                      Sofern eine betroffene Person besondere Services unseres Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch 
-                      eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für 
-                      eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.
+                      Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, DSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website und unserer Dienstleistungen.
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">1. Begriffsbestimmungen</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">1. Verantwortlicher</h3>
                     <p className="text-gray-300">
-                      Die Datenschutzerklärung der AA Automobile beruht auf den Begrifflichkeiten, die durch den Europäischen Richtlinien- und Verordnungsgeber 
-                      beim Erlass der Datenschutz-Grundverordnung (DSGVO) verwendet wurden. Unsere Datenschutzerklärung soll sowohl für die Öffentlichkeit als 
-                      auch für unsere Kunden und Geschäftspartner einfach lesbar und verständlich sein. Um dies zu gewährleisten, möchten wir vorab die 
-                      verwendeten Begrifflichkeiten erläutern.
-                    </p>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-4">2. Name und Anschrift des für die Verarbeitung Verantwortlichen</h3>
-                  <div className="mb-8">
-                    <p className="text-gray-300">
-                      Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union geltenden 
-                      Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist:
+                      Verantwortlicher im Sinne der DSGVO ist:
                     </p>
                     <p className="text-gray-300 mt-4">
-                      AA Automobile<br />
-                      Max Mustermann<br />
-                      Musterstraße 1<br />
-                      12345 Musterstadt<br />
-                      Deutschland<br />
-                      Tel.: +49 123 456789<br />
-                      E-Mail: datenschutz@aa-automobile.de<br />
-                      Website: www.aa-automobile.de
+                      AA Automobile e.U.<br />
+                      Gewerbestr. 4<br />
+                      4072 Alkoven<br />
+                      Österreich<br />
+                      Tel.: <a href="tel:+436601907710" className="text-aa-turquoise hover:underline">+43 660 1907710</a><br />
+                      E-Mail: <a href="mailto:office@aa-automobile.at" className="text-aa-turquoise hover:underline">office@aa-automobile.at</a><br />
+                      Website: www.aa-automobile.at
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">3. Cookies</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">2. Kontakt zum Datenschutzbeauftragten</h3>
                     <p className="text-gray-300">
-                      Die Internetseiten der AA Automobile verwenden Cookies. Cookies sind Textdateien, welche über einen Internetbrowser auf einem Computersystem 
-                      abgelegt und gespeichert werden.
+                      Bei Fragen zum Datenschutz können Sie sich direkt an uns wenden:<br />
+                      E-Mail: <a href="mailto:datenschutz@aa-automobile.at" className="text-aa-turquoise hover:underline">datenschutz@aa-automobile.at</a>
+                    </p>
+                  </div>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">3. Speicherung von Zugriffsdaten</h3>
+                    <p className="text-gray-300">
+                      Wir bzw. unser Webhostinganbieter erheben aufgrund unseres berechtigten Interesses Daten über jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet (sogenannte Serverlogfiles). Zu den Zugriffsdaten gehören:
+                    </p>
+                    <ul className="text-gray-300 mt-4 list-disc list-inside">
+                      <li>Name der abgerufenen Webseite</li>
+                      <li>Datei, Datum und Uhrzeit des Abrufs</li>
+                      <li>übertragene Datenmenge</li>
+                      <li>Meldung über erfolgreichen Abruf</li>
+                      <li>Browsertyp nebst Version</li>
+                      <li>das Betriebssystem des Nutzers</li>
+                      <li>Referrer URL (die zuvor besuchte Seite)</li>
+                      <li>IP-Adresse und der anfragende Provider</li>
+                    </ul>
+                    <p className="text-gray-300 mt-4">
+                      Diese Daten werden aus Sicherheitsgründen für maximal 7 Tage gespeichert und danach automatisch gelöscht.
+                    </p>
+                  </div>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">4. Cookies</h3>
+                    <p className="text-gray-300">
+                      Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden. Ihr Browser ruft diese Dateien ab. Die Verwendung von Cookies erhöht die Benutzerfreundlichkeit und Sicherheit unserer Website.
                     </p>
                     <p className="text-gray-300 mt-4">
-                      Zahlreiche Internetseiten und Server verwenden Cookies. Viele Cookies enthalten eine sogenannte Cookie-ID. Eine Cookie-ID ist eine eindeutige 
-                      Kennung des Cookies. Sie besteht aus einer Zeichenfolge, durch welche Internetseiten und Server dem konkreten Internetbrowser zugeordnet werden 
-                      können, in dem das Cookie gespeichert wurde. Dies ermöglicht es den besuchten Internetseiten und Servern, den individuellen Browser der 
-                      betroffenen Person von anderen Internetbrowsern, die andere Cookies enthalten, zu unterscheiden. Ein bestimmter Internetbrowser kann über die 
-                      eindeutige Cookie-ID wiedererkannt und identifiziert werden.
+                      Gängige Browser bieten die Einstellungsoption, Cookies nicht zuzulassen. Wir weisen jedoch darauf hin, dass die Nutzung unserer Website dann eingeschränkt sein kann.
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">4. Erfassung von allgemeinen Daten und Informationen</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">5. Kontaktformular und E-Mail-Kontakt</h3>
                     <p className="text-gray-300">
-                      Die Internetseite der AA Automobile erfasst mit jedem Aufruf der Internetseite durch eine betroffene Person oder ein automatisiertes System 
-                      eine Reihe von allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers gespeichert. 
-                      Erfasst werden können die (1) verwendeten Browsertypen und Versionen, (2) das vom zugreifenden System verwendete Betriebssystem, (3) die 
-                      Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt (sogenannte Referrer), (4) die Unterwebseiten, welche über 
-                      ein zugreifendes System auf unserer Internetseite angesteuert werden, (5) das Datum und die Uhrzeit eines Zugriffs auf die Internetseite, (6) 
-                      eine Internet-Protokoll-Adresse (IP-Adresse), (7) der Internet-Service-Provider des zugreifenden Systems und (8) sonstige ähnliche Daten und 
-                      Informationen, die der Gefahrenabwehr im Falle von Angriffen auf unsere informationstechnologischen Systeme dienen.
+                      Bei der Kontaktaufnahme mit uns (per Kontaktformular oder E-Mail) werden die von Ihnen mitgeteilten Daten von uns gespeichert, um Ihre Fragen zu bearbeiten und um mögliche Anschlussfragen zu beantworten. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                    </p>
+                    <p className="text-gray-300 mt-4">
+                      Rechtsgrundlage: Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) zur Bearbeitung von Anfragen und zur Anbahnung von Geschäftsbeziehungen.
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">5. Kontaktmöglichkeit über die Internetseite</h3>
                   <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">6. Speicherdauer</h3>
                     <p className="text-gray-300">
-                      Die Internetseite der AA Automobile enthält aufgrund von gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu 
-                      unserem Unternehmen sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine allgemeine Adresse der sogenannten 
-                      elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine betroffene Person per E-Mail oder über ein Kontaktformular den Kontakt mit dem für 
-                      die Verarbeitung Verantwortlichen aufnimmt, werden die von der betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. 
-                      Solche auf freiwilliger Basis von einer betroffenen Person an den für die Verarbeitung Verantwortlichen übermittelten personenbezogenen Daten 
-                      werden für Zwecke der Bearbeitung oder der Kontaktaufnahme zur betroffenen Person gespeichert. Es erfolgt keine Weitergabe dieser 
-                      personenbezogenen Daten an Dritte.
+                      Personenbezogene Daten werden nur solange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Nach Ablauf dieser Fristen werden die entsprechenden Daten routinemäßig gelöscht.
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4">6. Rechte der betroffenen Person</h3>
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">7. Ihre Rechte</h3>
+                    <p className="text-gray-300">
+                      Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren.
+                    </p>
+                    <p className="text-gray-300 mt-4">
+                      In Österreich ist dies die Datenschutzbehörde:<br />
+                      Österreichische Datenschutzbehörde<br />
+                      Wickenburggasse 8<br />
+                      1080 Wien<br />
+                      Telefon: +43 1 52 152-0<br />
+                      E-Mail: dsb@dsb.gv.at
+                    </p>
+                  </div>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold text-white mb-4">8. Datensicherheit</h3>
+                    <p className="text-gray-300">
+                      Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre durch uns verwalteten Daten gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder gegen den Zugriff unberechtigter Personen zu schützen.
+                    </p>
+                  </div>
+                  
                   <div>
+                    <h3 className="text-xl font-semibold text-white mb-4">9. Änderungen der Datenschutzerklärung</h3>
                     <p className="text-gray-300">
-                      Jede betroffene Person hat das Recht auf Auskunft, das Recht auf Berichtigung, das Recht auf Löschung, das Recht auf Einschränkung der 
-                      Verarbeitung, das Recht auf Datenübertragbarkeit, das Recht auf Widerspruch gegen die Verarbeitung und das Recht auf Widerruf einer 
-                      Einwilligung.
+                      Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen.
                     </p>
                     <p className="text-gray-300 mt-4">
-                      Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an: datenschutz@aa-automobile.de
+                      Stand: {new Date().toLocaleDateString('de-AT')}
                     </p>
                   </div>
                 </div>
