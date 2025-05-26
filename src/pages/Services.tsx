@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Car, ShoppingCart, RefreshCw, Truck, CheckCircle, Shield, PhoneCall, Users, Euro } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -152,7 +151,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800&h=600" alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=800&h=600" alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
           </div>
