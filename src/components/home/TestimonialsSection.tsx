@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
 
   return (
     <MarqueeTestimonials
-      title="Vertrauenswürdiger Gebrauchtwagenhandel mit Herz"
+      title="Mehr als nur ein Autohändler"
       description="Unsere zufriedenen Kunden sprechen für uns. Wir sind stolz auf unseren Ruf für Ehrlichkeit, Fairness und exzellenten Service."
       testimonials={testimonials}
       className="bg-[#0A0A0E] relative"
