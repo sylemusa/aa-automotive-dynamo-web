@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { Users, Shield, Clock, ArrowRight } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import AboutManagerSection from '../components/home/AboutManagerSection';
+
 const About = () => {
-  return <div className="pt-20">
+  return (
+    <div className="pt-20">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-b from-black to-aa-dark-gray">
         <div className="container mx-auto px-4">
@@ -28,7 +30,7 @@ const About = () => {
                   <img alt="AA-Automobile Autohaus" className="w-full h-full object-cover" src="/lovable-uploads/7595cc23-86ad-4da0-a029-b274e9612d3d.png" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-aa-turquoise p-4 rounded-lg text-white">
-                  <p className="font-semibold">Über 5 Jahre</p>
+                  <p className="font-semibold">Umfangreiche</p>
                   <p>Erfahrung</p>
                 </div>
               </div>
@@ -38,7 +40,7 @@ const About = () => {
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Über AA-Automobile </h2>
                 <p className="text-gray-300 mb-6">
-                  Als Familienbetrieb mit über 5 Jahren Erfahrung verbinden wir unsere Leidenschaft für Autos mit echter Kundenorientierung. Wir verstehen, dass der Kauf oder Verkauf eines Fahrzeugs eine wichtige Entscheidung ist, und begleiten Sie kompetent durch diesen Prozess.
+                  Als Familienbetrieb mit umfangreicher Erfahrung verbinden wir unsere Leidenschaft für Autos mit echter Kundenorientierung. Wir verstehen, dass der Kauf oder Verkauf eines Fahrzeugs eine wichtige Entscheidung ist, und begleiten Sie kompetent durch diesen Prozess.
                 </p>
                 <p className="text-gray-300 mb-8">
                   Unser Ziel ist es, langfristige Kundenbeziehungen aufzubauen, die auf Vertrauen und Zufriedenheit basieren. Viele unserer Kunden kommen immer wieder zu uns zurück oder empfehlen uns an Freunde und Familie weiter – darauf sind wir besonders stolz.
@@ -166,6 +168,8 @@ const About = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default About;
