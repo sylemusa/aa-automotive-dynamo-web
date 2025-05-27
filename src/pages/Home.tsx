@@ -12,9 +12,9 @@ const Home = () => {
     <div className="bg-black min-h-screen">
       <HeroSection />
       <ServicesSection />
+      <VehiclesPlatformSection />
       <AboutManagerSection />
       <TestimonialsSection />
-      <VehiclesPlatformSection />
       <FeaturesSection />
       <CTASection />
     </div>
