@@ -28,7 +28,7 @@ const HeroSection = () => {
       }} className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-2 text-white">
             <div className="text-aa-turquoise">Willkommen bei</div>
-            <div className="text-gray-50"><span className="text-aa-turquoise">AA</span>-Automobile</div>
+            <div className="text-slate-50"><span className="text-aa-turquoise">AA</span>-Automobile</div>
           </h1>
           
           {/* Separated subtitle with gradient text styling */}
