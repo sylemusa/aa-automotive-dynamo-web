@@ -12,7 +12,7 @@ const AboutManagerSection = () => {
           <ScrollAnimation>
             <div className="relative">
               <div className="glass-card rounded-2xl overflow-hidden glass-card-hover">
-                <img src="/lovable-uploads/83518182-2d54-4077-9885-90d42beccb17.png" alt="Geschäftsführer AA-Automobile" className="w-full h-96 object-cover" />
+                <img src="/lovable-uploads/1dea7924-de76-48a1-871e-cea6c0867f08.png" alt="Geschäftsführer AA-Automobile" className="w-full h-96 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
             </div>
