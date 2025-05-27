@@ -15,7 +15,7 @@ const AboutManagerSection = () => {
                 <img 
                   src="/lovable-uploads/2e001e05-0a35-407c-b0d6-855496d77681.png" 
                   alt="Geschäftsführer AA-Automobile" 
-                  className="w-full h-64 sm:h-80 md:h-96 object-cover object-top" 
+                  className="w-full aspect-square object-cover object-center" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
