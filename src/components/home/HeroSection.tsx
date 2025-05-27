@@ -59,7 +59,7 @@ const HeroSection = () => {
       }} transition={{
         duration: 0.7,
         delay: 0.4
-      }} className="flex items-center justify-center gap-6 mb-8">
+      }} className="flex items-center justify-start gap-6 mb-8">
           <div className="flex -space-x-4">
             <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-gray-800/50 backdrop-blur-sm flex items-center justify-center shadow-lg">
               <Users className="text-aa-turquoise" />
@@ -71,7 +71,7 @@ const HeroSection = () => {
               <Euro className="text-aa-turquoise" />
             </div>
           </div>
-          <div>
+          <div className="text-left">
             <h3 className="text-xl font-bold text-white">Umfangreiche Erfahrung</h3>
             <p className="text-white/80">Im Automobilhandel</p>
           </div>
