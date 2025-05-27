@@ -1,12 +1,9 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Car, Search, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import ScrollAnimation from '../ScrollAnimation';
-
 const VehiclesPlatformSection = () => {
-  return (
-    <section className="py-20 bg-gradient-to-b from-black via-aa-dark-gray/30 to-black relative">
+  return <section className="py-20 bg-gradient-to-b from-black via-aa-dark-gray/30 to-black relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_#41B6E6_1px,_transparent_1px)] bg-[length:30px_30px]"></div>
       
@@ -31,9 +28,7 @@ const VehiclesPlatformSection = () => {
             <div className="glass-card p-6 rounded-xl glass-card-hover text-center">
               <Search className="text-aa-turquoise mx-auto mb-4" size={40} />
               <h3 className="text-xl font-semibold text-white mb-3">Große Auswahl</h3>
-              <p className="text-gray-400">
-                Über 50 geprüfte Gebrauchtwagen verschiedener Marken und Modelle
-              </p>
+              <p className="text-gray-400">Über 50 geprüfte Gebrauchtwagen verschiedener Marken und Modelle</p>
             </div>
           </ScrollAnimation>
 
@@ -68,10 +63,7 @@ const VehiclesPlatformSection = () => {
                 Durchstöbern Sie unser komplettes Angebot an Gebrauchtwagen mit 
                 detaillierten Informationen, Bildern und Preisen.
               </p>
-              <Button 
-                className="bg-aa-turquoise hover:bg-aa-turquoise/80 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(65,182,230,0.5)] hover:scale-105"
-                onClick={() => window.open('https://www.autoscout24.at/haendler/aa-automobile-e-u', '_blank')}
-              >
+              <Button className="bg-aa-turquoise hover:bg-aa-turquoise/80 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(65,182,230,0.5)] hover:scale-105" onClick={() => window.open('https://www.autoscout24.at/haendler/aa-automobile-e-u', '_blank')}>
                 <ExternalLink className="mr-2" size={20} />
                 Zu unseren Fahrzeugen
               </Button>
@@ -79,8 +71,6 @@ const VehiclesPlatformSection = () => {
           </div>
         </ScrollAnimation>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default VehiclesPlatformSection;
