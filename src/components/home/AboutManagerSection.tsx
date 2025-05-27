@@ -33,26 +33,6 @@ const AboutManagerSection = () => {
               <p className="text-lg text-gray-400 leading-relaxed mb-8">Mit über 5 Jahren Erfahrung im Automobilhandel steht Eyüp Senkarabacak für Vertrauen, Kompetenz und erstklassigen Service. Seine Leidenschaft für Fahrzeuge und sein Engagement für Kundenzufriedenheit machen 
 AA-Automobile zu Ihrem verlässlichen Partner beim Auto kaufen und verkaufen.</p>
             </ScrollAnimation>
-
-            <ScrollAnimation delay={600}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="glass-card p-4 rounded-lg glass-card-hover text-center">
-                  <Award className="text-aa-turquoise mx-auto mb-2" size={32} />
-                  <h4 className="font-semibold text-white">5+ Jahre</h4>
-                  <p className="text-gray-400 text-sm">Erfahrung</p>
-                </div>
-                <div className="glass-card p-4 rounded-lg glass-card-hover text-center">
-                  <Users className="text-aa-turquoise mx-auto mb-2" size={32} />
-                  <h4 className="font-semibold text-white">200+</h4>
-                  <p className="text-gray-400 text-sm">Zufriedene Kunden</p>
-                </div>
-                <div className="glass-card p-4 rounded-lg glass-card-hover text-center">
-                  <Car className="text-aa-turquoise mx-auto mb-2" size={32} />
-                  <h4 className="font-semibold text-white">200+</h4>
-                  <p className="text-gray-400 text-sm">Verkaufte Fahrzeuge</p>
-                </div>
-              </div>
-            </ScrollAnimation>
           </div>
         </div>
       </div>
