@@ -39,11 +39,11 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <img 
             src="/lovable-uploads/fd77ee5d-f3d6-4a93-a46e-c739f5e5865d.png" 
-            alt="AA Automobile Logo" 
+            alt="AA-Automobile Logo" 
             className="h-12 mr-2 rounded-lg" 
           />
           <span className={`font-display text-xl font-bold ml-2 ${shouldUseDarkBg ? 'text-white' : 'text-white'}`}>
-            AA Automobile
+            AA-Automobile
           </span>
         </Link>
 

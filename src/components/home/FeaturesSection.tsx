@@ -9,7 +9,7 @@ const FeaturesSection = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Warum <span className="text-aa-turquoise">AA Automobile</span>?
+              Warum <span className="text-aa-turquoise">AA-Automobile</span>?
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Vertrauen Sie auf unsere Expertise und profitieren Sie von unseren einzigartigen Vorteilen

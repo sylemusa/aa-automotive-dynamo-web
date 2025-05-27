@@ -63,7 +63,7 @@ const ContactMap = () => {
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="AA Automobile Standort - Gewerbestr. 4, 4072 Alkoven, Österreich"
+              title="AA-Automobile Standort - Gewerbestr. 4, 4072 Alkoven, Österreich"
             ></iframe>
           </div>
         </div>

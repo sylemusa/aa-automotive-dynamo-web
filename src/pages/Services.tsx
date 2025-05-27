@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Car, ShoppingCart, RefreshCw, Truck, CheckCircle, Shield, PhoneCall, Users, Euro } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+
 const Services = () => {
-  return <div className="pt-20">
+  return (
+    <div className="pt-20">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-b from-black to-aa-dark-gray">
         <div className="container mx-auto px-4">
@@ -31,7 +33,7 @@ const Services = () => {
                   Auto kaufen – inklusive Beratung
                 </h2>
                 <p className="text-gray-300 mb-6">
-                  Bei AA Automobile finden Sie eine ausgewählte Palette geprüfter Gebrauchtwagen aller Marken und Preisklassen. Jedes Fahrzeug wird vor dem Verkauf einer gründlichen technischen Inspektion unterzogen.
+                  Bei AA-Automobile finden Sie eine ausgewählte Palette geprüfter Gebrauchtwagen aller Marken und Preisklassen. Jedes Fahrzeug wird vor dem Verkauf einer gründlichen technischen Inspektion unterzogen.
                 </p>
                 
                 <ul className="space-y-3 mb-8">
@@ -61,7 +63,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800&h=600" alt="Auto kaufen bei AA Automobile" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800&h=600" alt="Auto kaufen bei AA-Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
           </div>
@@ -70,7 +72,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800&h=600" alt="Auto verkaufen bei AA Automobile" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800&h=600" alt="Auto verkaufen bei AA-Automobile" className="w-full h-full object-cover" />
               </div>
             </ScrollAnimation>
             
@@ -150,7 +152,7 @@ const Services = () => {
             
             <ScrollAnimation delay={300} className="order-1 lg:order-2">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img alt="Autovermittlung bei AA Automobile" className="w-full h-full object-cover" src="/lovable-uploads/65746b57-431f-426d-93fb-e5a84b1243b9.png" />
+                <img alt="Autovermittlung bei AA-Automobile" className="w-full h-full object-cover" src="/lovable-uploads/65746b57-431f-426d-93fb-e5a84b1243b9.png" />
               </div>
             </ScrollAnimation>
           </div>
@@ -159,7 +161,7 @@ const Services = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollAnimation delay={300} className="order-1">
               <div className="rounded-xl overflow-hidden shadow-lg">
-                <img alt="Fahrzeugüberführung durch AA Automobile" className="w-full h-full object-cover" src="/lovable-uploads/40a64592-a92f-40bc-9d67-2c0a16ebad3f.png" />
+                <img alt="Fahrzeugüberführung durch AA-Automobile" className="w-full h-full object-cover" src="/lovable-uploads/40a64592-a92f-40bc-9d67-2c0a16ebad3f.png" />
               </div>
             </ScrollAnimation>
             
@@ -204,7 +206,7 @@ const Services = () => {
       <section className="py-20 bg-gradient-to-b from-aa-dark-gray to-black">
         <div className="container mx-auto px-4">
           <ScrollAnimation>
-            <h2 className="section-title text-center">Warum AA Automobile wählen?</h2>
+            <h2 className="section-title text-center">Warum AA-Automobile wählen?</h2>
           </ScrollAnimation>
           <ScrollAnimation delay={200}>
             <p className="section-subtitle text-center mx-auto">
@@ -272,6 +274,8 @@ const Services = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Services;

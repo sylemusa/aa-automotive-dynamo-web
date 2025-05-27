@@ -22,13 +22,14 @@ const Legal = ({
         <div className="container mx-auto px-4">
           <div className="bg-aa-dark-gray p-8 rounded-xl shadow-lg">
             <ScrollAnimation>
-              {type === 'impressum' ? <div className="prose prose-invert max-w-none">
+              {type === 'impressum' ? (
+                <div className="prose prose-invert max-w-none">
                   <h2 className="text-2xl font-bold text-white mb-6">Impressum</h2>
                   
                   <div className="mb-8">
                     <h3 className="text-xl font-semibold text-white mb-4">Unternehmensangaben</h3>
                     <p className="text-gray-300">
-                      AA Automobile e.U.<br />
+                      AA-Automobile e.U.<br />
                       Gewerbestr. 4<br />
                       4072 Alkoven<br />
                       Österreich
@@ -60,8 +61,6 @@ const Legal = ({
                       Verleihungsstaat: Österreich
                     </p>
                   </div>
-                  
-                  
                   
                   <div className="mb-8">
                     <h3 className="text-xl font-semibold text-white mb-4">Anwendbares Recht</h3>
@@ -101,7 +100,9 @@ const Legal = ({
                       Die Inhalte und Werke auf dieser Website unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors bzw. Erstellers.
                     </p>
                   </div>
-                </div> : <div className="prose prose-invert max-w-none">
+                </div>
+              ) : (
+                <div className="prose prose-invert max-w-none">
                   <h2 className="text-2xl font-bold text-white mb-6">Datenschutzerklärung</h2>
                   
                   <div className="mb-8">
@@ -116,7 +117,7 @@ const Legal = ({
                       Verantwortlicher im Sinne der DSGVO ist:
                     </p>
                     <p className="text-gray-300 mt-4">
-                      AA Automobile e.U.<br />
+                      AA-Automobile e.U.<br />
                       Gewerbestr. 4<br />
                       4072 Alkoven<br />
                       Österreich<br />
@@ -212,7 +213,8 @@ const Legal = ({
                       Stand: {new Date().toLocaleDateString('de-AT')}
                     </p>
                   </div>
-                </div>}
+                </div>
+              )}
             </ScrollAnimation>
           </div>
         </div>
