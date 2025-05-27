@@ -28,7 +28,7 @@ const VehiclesPlatformSection = () => {
             <div className="glass-card p-6 rounded-xl glass-card-hover text-center">
               <Search className="text-aa-turquoise mx-auto mb-4" size={40} />
               <h3 className="text-xl font-semibold text-white mb-3">Große Auswahl</h3>
-              <p className="text-gray-400">Über 50 geprüfte Gebrauchtwagen verschiedener Marken und Modelle</p>
+              <p className="text-gray-400">Zuverlässige Gebrauchtwagen aus vielen Marken und Modellreihen</p>
             </div>
           </ScrollAnimation>
 
