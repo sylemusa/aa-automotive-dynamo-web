@@ -1,15 +1,23 @@
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Users, Car, Euro, Phone, MapPin } from 'lucide-react';
+
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
-  return <section className="relative bg-transparent">
+
+  return (
+    <section className="relative bg-transparent">
       {/* Background Image - Full height */}
       <div className="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mercedes S-Class" className="w-full h-full object-cover brightness-[0.8]" />
+        <img 
+          src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+          alt="Mercedes S-Class" 
+          className="w-full h-full object-cover brightness-[0.8]" 
+        />
         {/* Darker gradient overlay from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
       </div>
@@ -64,7 +72,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">5+ Jahre Erfahrung</h3>
+            <h3 className="text-xl font-bold text-white">Umfangreiche Erfahrung</h3>
             <p className="text-white/80">Im Automobilhandel</p>
           </div>
         </motion.div>
@@ -100,6 +108,8 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
