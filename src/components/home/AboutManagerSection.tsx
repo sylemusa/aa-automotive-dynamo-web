@@ -1,11 +1,8 @@
-
 import { motion } from "framer-motion";
 import { Award, Users, Car } from 'lucide-react';
 import ScrollAnimation from '../ScrollAnimation';
-
 const AboutManagerSection = () => {
-  return (
-    <section className="py-20 bg-gradient-to-b from-black via-aa-dark-gray/50 to-black">
+  return <section className="py-20 bg-gradient-to-b from-black via-aa-dark-gray/50 to-black">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Manager Image */}
@@ -30,14 +27,12 @@ const AboutManagerSection = () => {
             </ScrollAnimation>
 
             <ScrollAnimation delay={400}>
-              <p className="text-lg text-gray-400 leading-relaxed mb-8">Mit über 5 Jahren Erfahrung im Automobilhandel steht Eyüp Senkarabacak für Vertrauen, Kompetenz und erstklassigen Service. Seine Leidenschaft für Fahrzeuge und sein Engagement für Kundenzufriedenheit machen 
-AA-Automobile zu Ihrem verlässlichen Partner beim Auto kaufen und verkaufen.</p>
+              <p className="text-lg text-gray-400 leading-relaxed mb-8">Umfassende Expertise im Automobilhandel steht für Vertrauen, Kompetenz und erstklassigen Service.
+Leidenschaft für Fahrzeuge und Einsatz für zufriedene Kunden machen AA-Automobile zu Ihrem verlässlichen Partner beim Auto kaufen und verkaufen.</p>
             </ScrollAnimation>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutManagerSection;
